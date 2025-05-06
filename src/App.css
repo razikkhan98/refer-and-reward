@@ -1,9 +1,3 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
 
 .logo {
   height: 6em;
@@ -79,12 +73,21 @@
 .text-underline-offset-6 {
   text-underline-offset: 6px;
 }
+/* Navbar effect Css */
+
+
+.nav-indicator {
+  bottom: 70px;
+  height: 3px;
+  transition: all 0.3s ease;
+}
+
 /* ======================================================================= */
 
 /* ======================== Hero Section ================================== */
 .hero-section {
   height: 100vh;
-  background-image: url(./Assets/Images/HeroBanner/file\ background.png);
+  background-image: url(../src/assets/HeroBanner/filebackground.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -141,3 +144,4 @@
   /* right: 00%; */
   /* transform: translate(-100%, -40%); */
 }
+
