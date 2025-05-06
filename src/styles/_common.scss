@@ -1,0 +1,98 @@
+@import './mixins';
+
+body {
+  margin: 0;
+  background-color: $white-secondry;
+}
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+// Thin
+.be-vietnam-pro-thin {
+  @include font-variation(100, normal);
+}
+
+// Extra Light
+.be-vietnam-pro-extralight {
+  @include font-variation(200, normal);
+}
+
+// Light
+.be-vietnam-pro-light {
+  @include font-variation(300, normal);
+}
+
+// Regular
+.be-vietnam-pro-regular {
+  @include font-variation(400, normal);
+}
+
+// Medium
+.be-vietnam-pro-medium {
+  @include font-variation(500, normal);
+}
+
+// Semibold
+.be-vietnam-pro-semibold {
+  @include font-variation(600, normal);
+}
+
+// Bold
+.be-vietnam-pro-bold {
+  @include font-variation(700, normal);
+}
+
+// Extra Bold
+.be-vietnam-pro-extrabold {
+  @include font-variation(800, normal);
+}
+
+// Black
+.be-vietnam-pro-black {
+  @include font-variation(900, normal);
+}
+
+.heading-h1{
+    font-size: pxToRem(72);
+    line-height: 150%;
+    @include font-variation(600, normal);
+}
+.heading-h2{
+    font-size: pxToRem(60);
+}
+.heading-h3{
+    font-size: functiopxToRem(52);
+}
+.heading-h4{
+    font-size: functiopxToRem(48);
+}
+.section-larg-padding-T-B{
+    padding-top: pxToRem(80);
+    padding-bottom: pxToRem(80);
+}
+.section-medium-padding-T-B{
+    padding-top: pxToRem(40);
+    padding-bottom: pxToRem(40);
+}
+.section-small-padding-T-B{
+    padding-top: pxToRem(24);
+    padding-bottom: pxToRem(24);
+}
+.margin-larg-T-B{
+    margin-top: pxToRem(80);
+    margin-bottom: pxToRem(80);
+}
+.margin-medium-T-B{
+    margin-top: pxToRem(48);
+    margin-bottom: pxToRem(48);
+}
+.margin-small-T-B{
+    margin-top: pxToRem(24);
+    margin-bottom: pxToRem(24);
+}
+.w-80{
+  width: 80%;
+}

@@ -1,0 +1,29 @@
+@import "../styles/variables";
+@import "../styles/function";
+@import "../styles/mixins";
+@import "../styles/common";
+@import "../styles/base";
+// @import "../App.scss";
+
+// IMPORT ALL COMPONENT CSS
+@import "../../src/Component/accordion/accordion.scss";
+@import "../../src/Component/educatorherobanner/educatorherobanner.scss";
+@import "../../src/Component/button/button.scss";
+@import "../../src/Component/educatorweoffers/educatorweoffers.scss";
+@import "../../src/Component/feature/feature.scss";
+@import "../../src/Component/footer/footer.scss";
+@import "../../src/Component/getintouch/getintouch.scss";
+@import "../../src/Component/heading/heading.scss";
+@import "../../src/Component/herobanner/herobanner.scss";
+@import "../../src/Component/imagetext/imagetext.scss";
+@import "../../src/Component/weoffers/weoffers.scss";
+@import "../../src/Component/visionmission/visionmission.scss";
+@import "../../src/Component/technologywork/technologywork.scss";
+// @import "../../src/Component/singleslider/singleslider.scss";
+@import "../../src/Component/services/services.scss";
+@import "../../src/Component/ourclients/ourclients.scss";
+@import "../../src/Component/oldfeature/feature.scss";
+@import "../../src/Component/marqueetext/marqueetext.scss";
+@import "../../src/Component/intelligenceherobanner/intelligenceherobanner.scss";
+@import "../../src/Component/intelligenceeducator/intelligenceeducator.scss";
+// @import "../../src/Component/";
