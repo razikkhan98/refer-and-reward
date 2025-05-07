@@ -48,16 +48,15 @@
 
 // export default Navbar;
 
-
-import React, { useEffect, useRef, useState } from "react";
-import navCenterImg from "../../../Assets/Images/navbar/navCenterImg.png";
+import React, { useEffect, useRef, useState } from 'react';
+import navCenterImg from '../../../assets/navbar/navCenterImg.svg';
 const Navbar = () => {
   const navItems = [
-    { label: "Home", color: "orange" },
-    { label: "About", color: "green" },
+    { label: 'Home', color: 'orange' },
+    { label: 'About', color: 'green' },
     { img: navCenterImg },
-    { label: "Testimonials", color: "blue" },
-    { label: "Contact", color: "rebeccapurple" },
+    { label: 'Testimonials', color: 'blue' },
+    { label: 'Contact', color: 'rebeccapurple' },
   ];
   const indicatorRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -72,7 +71,7 @@ const Navbar = () => {
     if (currentItem && indicatorRef.current) {
       indicatorRef.current.style.width = `${currentItem.offsetWidth}px`;
       indicatorRef.current.style.left = `${currentItem.offsetLeft}px`;
-      indicatorRef.current.style.backgroundColor = "#fff";
+      indicatorRef.current.style.backgroundColor = '#fff';
     }
   }, [activeIndex]);
   return (
@@ -99,23 +98,14 @@ const Navbar = () => {
                 {navItems?.map((i, index) => {
                   return !i?.img ? (
                     <li
-                      className={` ${
-                        index == 0
-                          ? " list-unstyled h-100 text-white fw-medium mt-4  pt-3"
-                          : index == 3
-                          ? " list-unstyled h-100 text-white fw-medium mt-4 pt-3"
-                          : " list-unstyled h-100 text-white fw-medium mt-4 pt-3"
-                      }`}
+                      className={`list-unstyled h-100 text-white fw-medium mt-4 pt-3`}
                     >
                       <span
                         data-active-color="orange"
                         ref={(el) => (navRefs.current[index] = el)}
                         className={`nav-link px-3 ${
-                          activeIndex === index ? "active" : ""
+                          activeIndex === index ? 'active' : ''
                         }`}
-                        // style={{
-                        //   color: activeIndex === index ? i.color : "#83818c",
-                        // }}
                         onClick={() => handleClick(index)}
                       >
                         {i?.label}
@@ -131,7 +121,10 @@ const Navbar = () => {
                     </li>
                   );
                 })}
-                <span className="nav-indicator position-absolute" ref={indicatorRef}></span>
+                <span
+                  className="nav-indicator position-absolute"
+                  ref={indicatorRef}
+                ></span>
               </ul>
             </div>
           </div>

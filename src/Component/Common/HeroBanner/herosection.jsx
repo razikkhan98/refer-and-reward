@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 
 const Herosection = () => {
+
+  // =========
+  // States
+  // =========
+
   return (
     <section className="banner-section">
       <div className="container">

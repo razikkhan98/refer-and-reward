@@ -66,18 +66,19 @@
 
 /* ===================== Navbar Or Header Css ============================ */
 
-/* .header-center-img {
-  width: 297px;
-  height: 140px;
-} */
 .text-underline-offset-6 {
   text-underline-offset: 6px;
 }
+
+.header-center-img {
+  filter: drop-shadow(0px 4px 4px #fff);
+}
+
 /* Navbar effect Css */
 
 
 .nav-indicator {
-  bottom: 70px;
+  bottom: 65px;
   height: 3px;
   transition: all 0.3s ease;
 }
@@ -100,36 +101,39 @@
 .solar-sys{
   bottom: 7%;
 }
-.navitag{
-  /* width: 200px; */
-}
-.navitag-left{
+
+.navitag-left {
   position: absolute;
-  left: -1%;
-  width: 5%;
-  height: 10%;
-  bottom: 30px;
+  left: -2%;
+  width: 7%;
+  bottom: 20%;
 }
 .navitag-right{
   position: absolute;
-  right: -1%;
-  width: 5%;
-  height: 10%;
-  bottom: 30px;
+  right: -2%;
+  width: 7%;
+  bottom: 20%;
+}
+
+.navi-plnt-left{
+  position: absolute;
+  bottom: 26%;
+  left: 7%;
+}
+.navi-plnt-right{
+  position: absolute;
+  bottom: 26%;
+  right: 7%;
 }
 
 .image-container {
-  width: 200px;
-  height: 200px;
+  width: 23%;
   margin: auto;
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 20px;
+  bottom: 3%;
   transition: transform 1s ease-in-out;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .image-container img {
   transition: opacity 0.1s ease-in-out;
@@ -137,11 +141,21 @@
   height: 100%;
 }
 
+.planet-shadow-purple{
+  filter: drop-shadow(-7px 7px 38px #55024CCC);
+}
+.planet-shadow-yellow{
+  filter: drop-shadow(-7px 7px 38px #FC941ACC);
+}
+.planet-shadow-green{
+  filter: drop-shadow(-7px 7px 38px #66968B);
+}
+.planet-shadow-blue{
+  filter: drop-shadow(-7px 7px 38px #4BABDF);
+}
+
 /* =========================================================================== */
 .bg-planet-ring{
-  top: 53%;
-  /* left: 50%; */
-  /* right: 00%; */
-  /* transform: translate(-100%, -40%); */
+  top: 45%;
 }
 
