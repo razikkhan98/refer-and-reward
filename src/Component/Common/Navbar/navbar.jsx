@@ -77,9 +77,9 @@ const Navbar = () => {
   return (
     <section className="header-section">
       <nav class="navbar navbar-expand-lg  my-0 py-0">
-        <div class="container-fluid">
+        <div class="container-fluid justify-content-end">
           <button
-            class="navbar-toggler"
+            className="navbar-toggler border-0 bg-white rounded-circle p-3 mt-5"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarTogglerDemo03"

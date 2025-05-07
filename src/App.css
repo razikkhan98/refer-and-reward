@@ -159,3 +159,50 @@
   top: 45%;
 }
 
+
+/* =================== MEDIA QUERY ===============================*/
+
+@media only screen and (min-width: 1024px) and (max-width: 1535px) {
+  .image-container {
+    width: 20%;
+  }
+  .bg-planet-ring{
+    top: 50%;
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1023px) {
+.bg-planet-ring {
+  top: 42%;
+  width: 85%;
+}
+.image-container {
+  width: 45%;
+  bottom: 17.5%;
+}
+.navitag-left {
+  position: absolute;
+  left: -2%;
+  width: 20%;
+  bottom: 45%;
+}
+.navitag-right {
+  position: absolute;
+  right: -2%;
+  width: 20%;
+  bottom: 45%;
+}
+.navi-plnt-right {
+  position: absolute;
+  bottom: 50%;
+  right: 20%;
+}
+.navi-plnt-left {
+  position: absolute;
+  bottom: 50%;
+  left: 20%;
+}
+}
+
+/* =================== MEDIA QUERY END ========================== */

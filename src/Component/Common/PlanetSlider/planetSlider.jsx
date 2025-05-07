@@ -44,7 +44,7 @@ function PlanetSlider() {
         {/* Planet ring with rotation */}
         <div className="d-flex justify-content-center">
           <img
-            className="w-75 bg-planet-ring position-absolute"
+            className="bg-planet-ring position-absolute"
             src={planetRing}
             alt=""
             style={{
