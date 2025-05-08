@@ -37,6 +37,7 @@
   --text-blue: rgba(26, 42, 108, 1);
   --text-dark-blue: rgba(11, 30, 68, 1);
   --light-white: rgba(250, 250, 250, 1);
+  
 }
 
 /* ================ font colors ============== */
@@ -164,6 +165,19 @@
 .bg-planet-ring {
   top: 45%;
 }
+
+/* ==================== SECOND SCREEN SECTIONS CSS ==================================== */
+.second-screen-section{
+  height: 100vh;
+  background-image: url(../src/assets/HeroBanner/secondscreenbg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+/* ==================== SECOND SCREEN SECTIONS CSS END ==================================== */
+
+
 
 /* =================== MEDIA QUERY ===============================*/
 
