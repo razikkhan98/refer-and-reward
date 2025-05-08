@@ -78,7 +78,7 @@ const Navbar = () => {
     <section className="header-section">
       <nav class="navbar navbar-expand-lg  my-0 py-0">
         <div class="container-fluid justify-content-end">
-          <button
+          {/* <button
             className="navbar-toggler border-0 bg-white rounded-circle p-3 mt-5"
             type="button"
             data-bs-toggle="collapse"
@@ -88,10 +88,10 @@ const Navbar = () => {
             aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
-          </button>
+          </button> */}
           <div
-            class="collapse navbar-collapse my-0 py-0"
-            id="navbarTogglerDemo03"
+            class="navbar-collapse my-0 py-0"
+            // id="navbarTogglerDemo03"
           >
             <div className="container-fluid px-5">
               <ul className="d-flex justify-content-between my-0 py-0 px-0">
