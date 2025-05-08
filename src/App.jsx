@@ -11,7 +11,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Home from './Component/Pages/Home/home';
-
+import SecondScreen from './Component/Pages/secondScreen/secondScreen';
 function App() {
   useEffect(() => {
     AOS.init({
@@ -19,13 +19,12 @@ function App() {
       once: false,     // Whether animation should happen only once
     });
   }, []);
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <Home />
+      {/* <SecondScreen/> */}
     </>
-  )
+  );
 }
 
 export default App;
