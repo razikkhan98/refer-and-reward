@@ -1,7 +1,7 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
 }
 
@@ -84,7 +84,7 @@
 /* ======================== Hero Section ================================== */
 .hero-section {
   height: 100vh;
-  background-image: url(./Assets/Images/HeroBanner/file\ background.png);
+  background-image: url(./assets/HeroBanner/file-background.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
