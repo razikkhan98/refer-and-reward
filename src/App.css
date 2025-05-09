@@ -37,7 +37,11 @@
   --text-blue: rgba(26, 42, 108, 1);
   --text-dark-blue: rgba(11, 30, 68, 1);
   --light-white: rgba(250, 250, 250, 1);
-  
+  --light-blue: rgba(64, 123, 255, 1);
+  --border-light:rgba(255, 255, 255, 0.4);
+  --text-blue-2:rgba(73, 52, 149, 1);
+  --dark-pink:rgba(224, 77, 176, 1);
+  --push-notification:rgba(157, 146, 210, 1);
 }
 
 /* ================ font colors ============== */
@@ -50,11 +54,38 @@
 .text-dark-blue {
   color: var(--text-dark-blue);
 }
+.text-blue-2{
+  color: var(--text-blue-2);
+}
+/* ============================================= */
+
+/* ================ background colors ================ */
+
+
+.background-text-blue {
+  background-color: var(--text-blue);
+}
+.background-light-blue {
+  background-color: var(--light-blue);
+}
+.background-dark-pink {
+  background-color: var(--dark-pink);
+}
+.background-push-notification {
+  background-color: var(--push-notification) !important;
+}
+
 /* ============================================= */
 
 /* ================ font size ================ */
+.font-size-14 {
+  font-size: 14px;
+}
 .font-size-16 {
   font-size: 16px;
+}
+.font-size-18 {
+  font-size: 18px;
 }
 .font-size-24 {
   font-size: 24px;
@@ -98,7 +129,7 @@
   display: block;
 }
 #banner-sec-heading-mob {
-  display: none ;
+  display: none;
 }
 
 /* =========================================================================== */
@@ -166,8 +197,12 @@
   top: 45%;
 }
 
+.heigth-85vh{
+  height: 85vh;
+}
+
 /* ==================== SECOND SCREEN SECTIONS CSS ==================================== */
-.second-screen-section{
+.second-screen-section {
   height: 100vh;
   background-image: url(../src/assets/HeroBanner/secondscreenbg.png);
   background-position: center;
@@ -175,14 +210,52 @@
   background-size: cover;
   overflow: hidden;
 }
+
+.till-ship-img {
+  top: -79%;
+  left: -16.7%;
+}
+.progress-sect-rocket {
+  top: -82%;
+  left: 2%;
+}
+.progress-sect-astronot {
+  top: -99%;
+  width: 20%;
+  left: 2%;
+}
+
+.till-ship-border-color{
+  border-right:0.5px solid var(--border-light) !important;
+}
+.progress-sect{
+  background: linear-gradient(180deg, rgba(255, 228, 147, 0.2) 47.11%, rgba(255, 200, 39, 0.4) 105.98%);
+}
+.progress-side-sec{
+  width: 20%;
+}
+.progress-side-hr {
+  border: 2px solid rgba(255, 240, 96, 1);
+  height: 20px;
+  margin: 0 auto;
+}
+.progress-side-hr-2{
+  border: 2px dashed rgba(255, 240, 96, 1);
+  height: 20px;
+  margin: 0 auto;
+}
+.progress-foot-alen {
+  top: -142%;
+  left: -1.2%;
+}
+.push-notification-close{
+  background-color:rgba(157, 146, 210, 0.15) !important;
+}
 /* ==================== SECOND SCREEN SECTIONS CSS END ==================================== */
-
-
 
 /* =================== MEDIA QUERY ===============================*/
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-
   #banner-sec-heading-desk {
     display: none !important;
   }
@@ -190,7 +263,7 @@
     display: flex;
   }
 }
-  @media only screen and (min-width: 1024px) and (max-width: 1535px) {
+@media only screen and (min-width: 1024px) and (max-width: 1535px) {
   .image-container {
     width: 20%;
   }

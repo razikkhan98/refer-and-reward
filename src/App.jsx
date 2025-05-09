@@ -8,8 +8,8 @@ import SecondScreen from './Component/Pages/secondScreen/secondScreen';
 function App() {
   return (
     <>
-      <Home />
-      {/* <SecondScreen/> */}
+      {/* <Home /> */}
+      <SecondScreen/>
     </>
   );
 }
