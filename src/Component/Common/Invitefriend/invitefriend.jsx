@@ -19,8 +19,9 @@ const Invitefriend = () => {
       };
   return (
     <section className="section-invitefriend position-relative">
-        <div className="row justify-content-center align-items-center h-100">
-            <div className="col-12 col-md-5">
+        <div className="invite-bottom-image" data-aos="fade-up" data-aos-duration="4000"></div>
+        <div className="row text-center justify-content-center align-items-center h-100 ">
+            <div className="col-12 col-md-5 content-z-index">
                 <h2 className="text-white font-40 mb-58">Invite a friend</h2>
                 <div className="copy-input-container">
                     <input
@@ -61,7 +62,6 @@ const Invitefriend = () => {
                 </ul>
             </div>
         </div>
-        <div className="invite-bottom-image" data-aos="fade-up"></div>
     </section>
   );
 }
