@@ -10,8 +10,9 @@ import leftarrow from '../../../assets/secondScreen/leftarrow.svg';
 import longarrow from '../../../assets/secondScreen/lngarw.svg';
 import rocket from '../../../assets/secondScreen/rocket.svg';
 import astronot from '../../../assets/secondScreen/astronot.svg';
-import alenship from '../../../assets/secondScreen/alenship.svg';
+import alenship from '../../../assets/secondScreen/alienship.svg';
 
+import pathway from '../../../assets/secondScreen/pathway.svg';
 import blue from '../../../assets/HomePlanets/blue.svg';
 import green from '../../../assets/HomePlanets/green.svg';
 import purple from '../../../assets/HomePlanets/purple.svg';
@@ -32,7 +33,7 @@ const SecondScreen = () => {
             </span>
           </div>
           <div className="col-lg-3 px-4 mt-4">
-            <div className="till-ship position-relative background-light-blue rounded-3">
+            <div className="till-ship position-relative background-light-blue tilte-shadow rounded-3">
               <img
                 className="position-absolute till-ship-img"
                 src={tiltship}
@@ -65,7 +66,7 @@ const SecondScreen = () => {
                     <img className="w-50 mx-auto" src={prgicon} alt="" />{' '}
                     <hr className="progress-side-hr" />
                   </div>{' '}
-                  <span className="ms-2 font-size-16 fw-medium text-blue-2">
+                  <span className="ms-2 progress-sect-name font-size-16 fw-medium text-blue-2">
                     Planet A
                   </span>
                 </li>
@@ -74,7 +75,7 @@ const SecondScreen = () => {
                     <hr className="progress-side-hr-2" />
                     <img className="w-50 mx-auto" src={prgicon} alt="" />{' '}
                   </div>{' '}
-                  <span className="ms-2 mt-1 d-flex align-items-end font-size-16 fw-medium text-blue-2">
+                  <span className="ms-2 progress-sect-name mt-1 d-flex align-items-end font-size-16 fw-medium text-blue-2">
                     Planet B
                   </span>
                 </li>
@@ -83,7 +84,7 @@ const SecondScreen = () => {
                     <hr className="progress-side-hr-2" />
                     <img className="w-50 mx-auto" src={prgicon} alt="" />{' '}
                   </div>{' '}
-                  <span className="ms-2 mt-1 d-flex align-items-end font-size-16 fw-medium text-blue-2">
+                  <span className="ms-2 progress-sect-name mt-1 d-flex align-items-end font-size-16 fw-medium text-blue-2">
                     Planet C
                   </span>
                 </li>
@@ -92,7 +93,7 @@ const SecondScreen = () => {
                     <hr className="progress-side-hr-2" />
                     <img className="w-50 mx-auto" src={prgicon} alt="" />{' '}
                   </div>{' '}
-                  <span className="ms-2 mt-1 d-flex align-items-end font-size-16 fw-medium text-blue-2">
+                  <span className="ms-2 progress-sect-name mt-1 d-flex align-items-end font-size-16 fw-medium text-blue-2">
                     Planet D
                   </span>
                 </li>
@@ -129,47 +130,81 @@ const SecondScreen = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-9">
+          <div className="col-lg-9 ">
             <div className="row">
               <div className="col-lg-3 text-center">
-                <img className='w-50 planet-shadow-purple' src={purple} alt="" />
+                <img
+                  className="w-50 planet-shadow-purple"
+                  src={purple}
+                  alt=""
+                />
               </div>
               <div className="col-lg-3"></div>
               <div className="col-lg-3 text-center">
-                <img className='w-50 planet-shadow-yellow' src={yellow} alt="" srcset="" />
+                <img
+                  className="w-50 planet-shadow-yellow"
+                  src={yellow}
+                  alt=""
+                  srcset=""
+                />
               </div>
               <div className="col-lg-3"></div>
             </div>
-            <div className="row">
-              <div className="col-lg-3">
-                <h4 className="my-0 font-24">
-                Planet A
-                </h4>
-                <p>
-                Complete the level and earn 
+            <div className="row position-relative">
+              <img
+                className="position-absolute second-screen-pathway px-0"
+                src={pathway}
+                alt=""
+              />
+              <div className="col-lg-3 text-center text-dark-blue mt-4 pt-4">
+                <h4 className="mb-2">Planet A</h4>
+                <p className="font-size-16 fw-normal my-0">
+                  Complete the level and earn
                 </p>
-                <span>1000 Meteors</span>
+                <span className="fw-medium">1000 Meteors</span>
               </div>
               <div className="col-lg-3"></div>
-              <div className="col-lg-3">
-                <h4 className="my-0 font-24">
-                Planet C
-                </h4>
-                <p>
-                Little more consistency and you will earn 
+              <div className="col-lg-3 text-center text-dark-blue mt-4 pt-4">
+                <h4 className="mb-2">Planet C</h4>
+                <p className="font-size-16 fw-normal my-0">
+                  Little more consistency and
                 </p>
-                <span>2080 Meteors</span>
+                you will earn <span className="fw-medium">2080 Meteors</span>
               </div>
               <div className="col-lg-3"></div>
             </div>
-            <div className="row">
+            <div className="row mt-2">
               <div className="col-lg-3"></div>
-              <div className="col-lg-3 text-center">
-                <img className='w-50 planet-shadow-green' src={green} alt="" srcset="" />
+              <div className="col-lg-3 text-center text-dark-blue">
+                <img
+                  className="w-50 planet-shadow-green"
+                  src={green}
+                  alt=""
+                  srcset=""
+                />
+                <div className=" text-center text-dark-blue">
+                  <h4 className="mb-2">Planet B</h4>
+                  You are just <span className="fw-medium">1850 Meteors</span>
+                  <p className="font-size-16 fw-normal my-0">
+                    away to reach to this planet
+                  </p>
+                </div>
               </div>
               <div className="col-lg-3"></div>
-              <div className="col-lg-3 text-center">
-                <img className='w-50 planet-shadow-blue' src={blue} alt="" srcset="" />
+              <div className="col-lg-3 text-center text-dark-blue">
+                <img
+                  className="w-50 planet-shadow-blue"
+                  src={blue}
+                  alt=""
+                  srcset=""
+                />
+                <div className=" text-center text-dark-blue">
+                  <h4 className="mb-2">Planet D</h4>
+                  <span className="fw-medium">3080 Meteors</span>Meteors to go
+                  <p className="font-size-16 fw-normal my-0">
+                    and your exclusive reward awaits!!!
+                  </p>
+                </div>
               </div>
             </div>
             <div>
@@ -184,7 +219,6 @@ const SecondScreen = () => {
                   <div className="modal-dialog modal-xl modal-bottom">
                     <div className="modal-content border-0">
                       <div className="modal-header border-0">
-                        {/* <h1 className="modal-title fs-5" id="exampleModalLabel">Modal title</h1> */}
                         <button
                           type="button"
                           className="btn-close bg-light p-2 mb-2 rounded-circle"

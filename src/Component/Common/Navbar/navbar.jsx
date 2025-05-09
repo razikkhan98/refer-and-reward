@@ -28,21 +28,7 @@ const Navbar = () => {
     <section className="header-section">
       <nav class="navbar navbar-expand-lg  my-0 py-0">
         <div class="container-fluid justify-content-end">
-          {/* <button
-            className="navbar-toggler border-0 bg-white rounded-circle p-3 mt-5"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarTogglerDemo03"
-            aria-controls="navbarTogglerDemo03"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button> */}
-          <div
-            class="navbar-collapse my-0 py-0"
-            // id="navbarTogglerDemo03"
-          >
+          <div class="navbar-collapse my-0 py-0">
             <div className="container-fluid px-5">
               <ul className="d-flex justify-content-between my-0 py-0 px-0">
                 {navItems?.map((i, index) => {
