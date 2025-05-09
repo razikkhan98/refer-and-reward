@@ -22,7 +22,7 @@ $font-sizes: 8, 12, 14, 16, 18, 20, 24, 32,36,40,44,48,52,56,60,64,68,72;  // Yo
 }
 
 // Define the range of padding and margin values you want
-$spacing-values: 0, 4, 8, 10, 12, 14, 16, 20, 24, 32, 36, 40, 44, 48,52, 56, 62, 68, 72, 78;
+$spacing-values: 0, 4, 8, 10, 12, 14, 16, 20, 24, 32, 36, 40, 44,46, 48,52, 56,58, 62, 68, 72, 78;
 
 // Generate padding classes (padding-top, padding-right, padding-bottom, padding-left)
 @each $value in $spacing-values {

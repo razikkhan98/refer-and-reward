@@ -1,0 +1,250 @@
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+:root {
+  --text-blue: rgba(26, 42, 108, 1);
+  --text-dark-blue: rgba(11, 30, 68, 1);
+  --light-white: rgba(250, 250, 250, 1);
+  
+}
+
+/* ================ font colors ============== */
+.text-blue {
+  color: var(--text-blue);
+}
+.text-light-white {
+  color: var(--light-white);
+}
+.text-dark-blue {
+  color: var(--text-dark-blue);
+}
+/* ============================================= */
+
+/* ================ font size ================ */
+.font-size-16 {
+  font-size: 16px;
+}
+.font-size-24 {
+  font-size: 24px;
+}
+.font-size-46 {
+  font-size: 46px;
+}
+/* ============================================ */
+
+/* ===================== Navbar Or Header Css ============================ */
+
+.text-underline-offset-6 {
+  text-underline-offset: 6px;
+}
+
+.header-center-img {
+  filter: drop-shadow(0px 4px 4px #fff);
+}
+
+/* Navbar effect Css */
+
+.nav-indicator {
+  bottom: 65px;
+  height: 3px;
+  transition: all 0.3s ease;
+  z-index: 0;
+}
+
+.active-blur-shadow{
+  background-image: url('./assets/HeroBanner/bg-blur.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+  height: 100%;
+  width: 200px;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+/* ======================================================================= */
+
+/* ======================== Hero Section ================================== */
+.hero-section {
+  height: 100vh;
+  background-image: url(../src/assets/HeroBanner/filebackground.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+#banner-sec-heading-desk {
+  display: block;
+}
+#banner-sec-heading-mob {
+  display: none ;
+}
+
+/* =========================================================================== */
+
+/* ============== planet animation ==================*/
+
+.solar-sys {
+  bottom: 7%;
+}
+
+.navitag-left {
+  position: absolute;
+  left: -2%;
+  width: 7%;
+  bottom: 20%;
+}
+.navitag-right {
+  position: absolute;
+  right: -2%;
+  width: 7%;
+  bottom: 20%;
+}
+
+.navi-plnt-left {
+  position: absolute;
+  bottom: 26%;
+  left: 7%;
+}
+.navi-plnt-right {
+  position: absolute;
+  bottom: 26%;
+  right: 7%;
+}
+
+.image-container {
+  width: 23%;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 3%;
+  transition: transform 1s ease-in-out;
+}
+.image-container img {
+  transition: opacity 0.1s ease-in-out;
+  /* width: 100%; */
+  height: 100%;
+}
+
+.planet-shadow-purple {
+  filter: drop-shadow(-7px 7px 38px #55024ccc);
+}
+.planet-shadow-yellow {
+  filter: drop-shadow(-7px 7px 38px #fc941acc);
+}
+.planet-shadow-green {
+  filter: drop-shadow(-7px 7px 38px #66968b);
+}
+.planet-shadow-blue {
+  filter: drop-shadow(-7px 7px 38px #4babdf);
+}
+
+/* =========================================================================== */
+.bg-planet-ring {
+  top: 45%;
+}
+
+/* ==================== SECOND SCREEN SECTIONS CSS ==================================== */
+.second-screen-section{
+  height: 100vh;
+  background-image: url(../src/assets/HeroBanner/secondscreenbg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+/* ==================== SECOND SCREEN SECTIONS CSS END ==================================== */
+
+
+
+/* =================== MEDIA QUERY ===============================*/
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+  #banner-sec-heading-desk {
+    display: none !important;
+  }
+  #banner-sec-heading-mob {
+    display: flex;
+  }
+}
+  @media only screen and (min-width: 1024px) and (max-width: 1535px) {
+  .image-container {
+    width: 20%;
+  }
+  .bg-planet-ring {
+    top: 50%;
+    width: 70%;
+  }  
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1023px) {
+  .bg-planet-ring {
+    top: 42%;
+    width: 85%;
+  }
+  .image-container {
+    width: 45%;
+    bottom: 17.5%;
+  }
+  .navitag-left {
+    position: absolute;
+    left: -2%;
+    width: 20%;
+    bottom: 45%;
+  }
+  .navitag-right {
+    position: absolute;
+    right: -2%;
+    width: 20%;
+    bottom: 45%;
+  }
+  .navi-plnt-right {
+    position: absolute;
+    bottom: 50%;
+    right: 20%;
+  }
+  .navi-plnt-left {
+    position: absolute;
+    bottom: 50%;
+    left: 20%;
+  }
+}
+
+/* =================== MEDIA QUERY END ========================== */
