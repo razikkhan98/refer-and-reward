@@ -42,6 +42,7 @@
   --text-blue-2: rgba(73, 52, 149, 1);
   --dark-pink: rgba(224, 77, 176, 1);
   --push-notification: rgba(157, 146, 210, 1);
+  --light-yellow: rgba(255, 217, 57, 1);
 }
 
 /* ================ font colors ============== */
@@ -57,12 +58,15 @@
 .text-blue-2 {
   color: var(--text-blue-2);
 }
+.text-light-yellow {
+  color: var(--light-yellow);
+}
 /* ============================================= */
 
 /* ================ background colors ================ */
 
 .background-text-blue {
-  background-color: var(--text-blue);
+  background-color: var(--text-blue) !important;
 }
 .background-light-blue {
   background-color: var(--light-blue);
@@ -89,6 +93,9 @@
 .font-size-24 {
   font-size: 24px;
 }
+.font-size-28 {
+  font-size: 28px;
+}
 .font-size-46 {
   font-size: 46px;
 }
@@ -113,7 +120,7 @@
   z-index: 0;
 }
 
-.active-blur-shadow{
+.active-blur-shadow {
   background-image: url('./assets/HeroBanner/bg-blur.svg');
   background-position: center;
   background-size: cover;
@@ -270,8 +277,8 @@
   margin: 0 auto;
 }
 .progress-foot-alen {
-  top: -144%;
   left: -4.2%;
+  bottom: -1%;
 }
 .push-notification-close {
   background-color: rgba(157, 146, 210, 0.15) !important;
@@ -283,6 +290,77 @@
 }
 
 /* ==================== SECOND SCREEN SECTIONS CSS END ==================================== */
+/* ==================== REDEEM AND EARN SECTIONS CSS ==================================== */
+.redeem-circle {
+  width: 300px;
+  height: 300px;
+  background-image: url(../src/assets/redeemEarn/blueBaseStar.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.redeem-shadow {
+  filter: drop-shadow(-10px 0px 10px #493495);
+}
+
+.redem-box {
+  top: 10%;
+  right: 31%;
+}
+.launch-rocket {
+  bottom: 18%;
+}
+.redeem-circle-sect {
+  right: -22%;
+  bottom: 60%;
+}
+.earnmore-circle-sect {
+  left: -22%;
+  bottom: -60%;
+}
+.coins-box {
+  top: 10%;
+  right: 23%;
+}
+.earn-shadow {
+  filter: drop-shadow(10px 0px 10px #493495);
+}
+
+/* ==================== REDEEM AND EARN SECTIONS CSS END ==================================== */
+/* ==================== PLAY AND EARN SECTIONS CSS ==================================== */
+.pay-earn-section {
+  background-image: url(../src/assets/playEarn/PlayAndearn.png);
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.pay-earn-content {
+  height: 100vh;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(10, 28, 69, 0.8) 100%
+  );
+}
+.pay-earn-content .row {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.hover-card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.hover-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+/* ==================== PLAY AND EARN SECTIONS CSS END ==================================== */
 
 /* =================== MEDIA QUERY ===============================*/
 
@@ -301,7 +379,7 @@
   .bg-planet-ring {
     top: 50%;
     width: 70%;
-  }  
+  }
 }
 
 @media only screen and (min-width: 700px) and (max-width: 1023px) {

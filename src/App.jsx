@@ -11,6 +11,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import SecondScreen from './Component/Pages/secondScreen/secondScreen';
+import RedeemAndEarn from './Component/Pages/RedeemEarn/redeemAndEarn';
+import Home from './Component/Pages/Home/home';
+import PlayEarn from './Component/Pages/palyEarn/playEarn';
 function App() {
   useEffect(() => {
     AOS.init({
@@ -20,7 +23,10 @@ function App() {
   }, []);
   return (
     <>
-      <SecondScreen />
+    {/* <Home/> */}
+      {/* <SecondScreen /> */}
+      {/* <RedeemAndEarn/> */}
+      <PlayEarn/>
     </>
   );
 }
