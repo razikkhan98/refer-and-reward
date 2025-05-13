@@ -33,7 +33,7 @@ const SecondScreen = () => {
             </span>
           </div>
           <div className="col-lg-3 px-4 mt-4">
-            <div className="till-ship position-relative background-light-blue tilte-shadow rounded-3">
+            <div className="till-ship position-relative tilte-shadow rounded-3">
               <img
                 className="position-absolute till-ship-img"
                 src={tiltship}

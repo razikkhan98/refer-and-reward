@@ -1,8 +1,8 @@
-import { useState,useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.scss'
-import '../src/styles/main.scss';
+import { useState,useEffect } from 'react';
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
+import './App.scss';
+import '../src/styles/main.scss'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 // import '@fontsource/space-grotesk';
