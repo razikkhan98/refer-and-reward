@@ -265,7 +265,12 @@
 }
 .progress-side-hr {
   border: 2px solid rgba(255, 240, 96, 1);
-  height: 20px;
+  height: 59px;
+  margin: 0 auto;
+}
+.progress-side-hr11{
+  border: 2px dashed rgba(255, 240, 96, 1);
+  height: 45px;
   margin: 0 auto;
 }
 .progress-side-hr-2 {
