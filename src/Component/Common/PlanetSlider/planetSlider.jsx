@@ -61,7 +61,7 @@ function PlanetSlider() {
             src={images[prevIndex]}
             alt="planets-images"
           />
-          <span className="navi-plnt-left">
+          <span className="navi-plnt-left space-grotesk-medium">
             Planet{' '}
             {`${prevIndex == 0 ? 'A' : prevIndex == 1 ? 'B' : prevIndex == 2 ? 'C' : 'D'}`}
           </span>
@@ -90,7 +90,7 @@ function PlanetSlider() {
             src={images[nextIndex]}
             alt="planets-images"
           />
-          <span className="navi-plnt-right">
+          <span className="navi-plnt-right space-grotesk-medium">
             Planet{' '}
             {`${nextIndex == 0 ? 'A' : nextIndex == 1 ? 'B' : nextIndex == 2 ? 'C' : 'D'}`}
           </span>

@@ -21,9 +21,9 @@ const Invitefriend = () => {
     <section className="section-invitefriend position-relative">
         <div className="invite-bottom-image" data-aos="fade-up" data-aos-duration="4000"></div>
         <div className="container">
-            <div className="row text-center justify-content-center align-items-start h-100 ">
-                <div className="col-12 col-md-5 content-z-index mt-72">
-                    <h2 className="text-white font-40 mb-58">Invite a friend</h2>
+            <div className="row text-center justify-content-center align-items-start h-100">
+                <div className="col-12 col-md-5 content-z-index pt-72">
+                    <h2 className="text-white font-40 mb-58 space-grotesk-b">Invite a friend</h2>
                     <div className="copy-input-container">
                         <input
                             ref={inputRef}
@@ -38,7 +38,7 @@ const Invitefriend = () => {
                     <div className="divider-with-text">
                         <span className="divider-border">Or</span>
                     </div>
-                    <button className="btn-share-via-whatsapp text-white bg-primary-color font-18 mb-46">Share Via Whatsapp</button>
+                    <button className="btn-share-via-whatsapp poppins-regular text-white bg-primary-color font-18 mb-46">Share Via Whatsapp</button>
                     <ul className="social-nav pl-0 d-flex justify-content-center">
                         <li className="social-list">
                             <a className="social-link" href="" target="_blank" rel="noopener noreferrer">
