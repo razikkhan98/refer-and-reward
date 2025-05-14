@@ -1,8 +1,8 @@
-import { useState,useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.scss'
-import '../src/styles/main.scss';
+import { useState,useEffect } from 'react';
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
+import './App.scss';
+import '../src/styles/main.scss'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 // import '@fontsource/space-grotesk';
@@ -14,6 +14,7 @@ import SecondScreen from './Component/Pages/secondScreen/secondScreen';
 import RedeemAndEarn from './Component/Pages/RedeemEarn/redeemAndEarn';
 import Home from './Component/Pages/Home/home';
 import PlayEarn from './Component/Pages/palyEarn/playEarn';
+import Invitefriend from './Component/Common/Invitefriend/invitefriend'
 function App() {
   useEffect(() => {
     AOS.init({
@@ -23,10 +24,12 @@ function App() {
   }, []);
   return (
     <>
-    {/* <Home/> */}
-      {/* <SecondScreen /> */}
-      {/* <RedeemAndEarn/> */}
+    <Home/>
+      
+      <SecondScreen />
+      <RedeemAndEarn/>
       <PlayEarn/>
+      <Invitefriend/>
     </>
   );
 }
