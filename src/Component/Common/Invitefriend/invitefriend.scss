@@ -1,7 +1,7 @@
 .section-invitefriend{
     height: 100vh;
     background-image: url('../../../assets/Invitefriend/invite-bg.png');
-    background-position: center;
+    background-position: top;
     background-size: cover;
     background-repeat: repeat;
     width: 100%;
@@ -13,7 +13,7 @@
         display: inline-block;
         width: 100%;
         .input-invite-friend {
-          padding:11px 16px; // Make space for the button
+          padding:11px 16px; 
           width: 100%;
           height: 68px;
           font-size: 14px;
@@ -65,6 +65,8 @@
         text-align: center;
         padding: 16px 60px;
         background: #1A2A6C;
+        outline: none;
+        border: none;
       }
       .social-nav{
         display: flex;
@@ -82,11 +84,11 @@
         position: absolute;
         bottom: 0;
         background-image: url('../../../assets/Invitefriend/invite-bottom-img.svg');
-        background-position: center;
+        background-position: top;
         background-size: cover;
         background-repeat: no-repeat;
         width: 100%;
-        height: 75%;
+        height: 60%;
         z-index: 1;
       }
 }
