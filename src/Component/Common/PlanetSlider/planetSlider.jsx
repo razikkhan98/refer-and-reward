@@ -46,7 +46,7 @@ function PlanetSlider() {
           <img
             className="bg-planet-ring position-absolute"
             src={planetRing}
-            alt=""
+            alt="planets-planetRing"
             style={{
               transform: `rotate(${ringRotation}deg)`,
               transition: 'transform 0.2s linear',
@@ -59,7 +59,7 @@ function PlanetSlider() {
             className={`navitag-left planet-shadow-${prevIndex == 0 ? 'purple' : prevIndex == 1 ? 'yellow' : prevIndex == 2 ? 'green' : 'blue'}`}
             onClick={() => rotate('left')}
             src={images[prevIndex]}
-            alt=""
+            alt="planets-images"
           />
           <span className="navi-plnt-left">
             Planet{' '}
@@ -88,7 +88,7 @@ function PlanetSlider() {
             className={`navitag-right planet-shadow-${nextIndex == 0 ? 'purple' : nextIndex == 1 ? 'yellow' : nextIndex == 2 ? 'green' : 'blue'}`}
             onClick={() => rotate('right')}
             src={images[nextIndex]}
-            alt=""
+            alt="planets-images"
           />
           <span className="navi-plnt-right">
             Planet{' '}

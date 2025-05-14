@@ -68,7 +68,7 @@ const Navbar = () => {
                       <img
                         className="header-center-img h-75"
                         src={navCenterImg}
-                        alt=""
+                        alt="navCenterImg"
                       />
                     </li>
                   );

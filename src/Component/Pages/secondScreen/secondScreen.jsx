@@ -26,23 +26,28 @@ const SecondScreen = () => {
   return (
     <section className="second-screen-section position-relative" id="">
       <div className="container">
-        <div className="row justify-content-end mt-4">
+        <div className="row justify-content-between mt-4">
+          <div className="col-lg-3">
+            <span className=" text-white d-flex font-size-14 fw-medium">
+              <img className="me-1" src={leftarrow} alt="leftarrow" /> Back
+            </span>
+          </div>
           <div className="col-lg-3 px-4 mt-4">
             <div className="till-ship position-relative background-light-blue tilte-shadow rounded-3">
               <img
                 className="position-absolute till-ship-img"
                 src={tiltship}
-                alt=""
+                alt="tiltship"
               />
               <div className="py-2 offset-2 text-white">
                 <span className="montserrat-bold font-14 fw-bold till-ship-border-color pe-3 z-1 position-relative">
                   300
-                  <img className="my-1 mx-2" src={metero} alt="" />
+                  <img className="my-1 mx-2" src={metero} alt="metero" />
                   <span className="font-14 montserrat-semibol">Meteors</span>
                 </span>
                 <span className="font-14 montserrat-semibol ms-3">
                   1
-                  <img className="mx-1" src={star} alt="" />
+                  <img className="mx-1" src={star} alt="star" />
                   <span className="space-grotesk-medium">star</span>
                 </span>
               </div>
@@ -59,7 +64,7 @@ const SecondScreen = () => {
                 <ul className="list-unstyled mb-0 ps-4 pt-1">
                   <li className="d-flex pt-2">
                     <div className="d-grid progress-side-sec">
-                      <img className="w-50 mx-auto" src={prgicon} alt="" />{' '}
+                      <img className="w-50 mx-auto" src={prgicon} alt="prgicon" />{' '}
                       <hr className="progress-side-hr" />
                     </div>{' '}
                     <span className="ms-2 progress-sect-name space-grotesk-medium font-16 text-blue-2">
@@ -69,7 +74,11 @@ const SecondScreen = () => {
                   <li className="d-flex pt-1">
                     <div className="d-grid progress-side-sec">
                       <hr className="progress-side-hr11" />
-                      <img className="w-50 mx-auto" src={prgicon} alt="" />{' '}
+                      <img
+                      className="w-50 mx-auto"
+                      src={prgicon}
+                      alt="prgicon"
+                    />{' '}
                     </div>{' '}
                     <span className="ms-2 progress-sect-name mt-1 d-flex align-items-end space-grotesk-medium font-16 text-blue-2">
                       Planet B
@@ -78,7 +87,11 @@ const SecondScreen = () => {
                   <li className="d-flex pt-2">
                     <div className="d-grid progress-side-sec">
                       <hr className="progress-side-hr-2" />
-                      <img className="w-50 mx-auto" src={prgicon} alt="" />{' '}
+                      <img
+                      className="w-50 mx-auto"
+                      src={prgicon}
+                      alt="prgicon"
+                    />{' '}
                     </div>{' '}
                     <span className="ms-2 progress-sect-name mt-1 d-flex align-items-end space-grotesk-medium font-16 text-blue-2">
                       Planet C
@@ -87,7 +100,11 @@ const SecondScreen = () => {
                   <li className="d-flex pt-2">
                     <div className="d-grid progress-side-sec">
                       <hr className="progress-side-hr-2" />
-                      <img className="w-50 mx-auto" src={prgicon} alt="" />{' '}
+                      <img
+                      className="w-50 mx-auto"
+                      src={prgicon}
+                      alt="prgicon"
+                    />{' '}
                     </div>{' '}
                     <span className="ms-2 progress-sect-name mt-1 d-flex align-items-end space-grotesk-medium font-16 text-blue-2">
                       Planet D
@@ -95,7 +112,7 @@ const SecondScreen = () => {
                   </li>
                 </ul>
                 <div className="text-center mt-34 pb-3">
-                  <img className="w-25" src={borderstar} alt="" />
+                  <img className="w-25" src={borderstar} alt="borderstar" />
                   <h4 className="my-0 mt-2 font-18 space-grotesk-medium">
                     Galaxy Complete
                   </h4>
@@ -107,23 +124,23 @@ const SecondScreen = () => {
                 <img
                   className="w-25 progress-sect-rocket position-absolute"
                   src={rocket}
-                  alt=""
+                  alt="rocket"
                 />
                 <span className="text-white font-16 montserrat-semibold offset-3 me-3">
                   Play & Earn
                 </span>
-                <img src={longarrow} alt="" />
+                <img src={longarrow} alt="longarrow" />
               </div>
               <div className="d-flex justify-content-evenly background-dark-pink mt-5 rounded-2 position-relative py-2">
                 <img
                   className=" progress-sect-astronot position-absolute"
                   src={astronot}
-                  alt=""
+                  alt="astronot"
                 />
                 <span className="text-white font-16 montserrat-semibol offset-3 me-3">
                   Invite & Earn
                 </span>
-                <img src={longarrow} alt="" />
+                <img src={longarrow} alt="longarrow" />
               </div>
             </div>
           </div>
@@ -133,16 +150,16 @@ const SecondScreen = () => {
                 <img
                   className="width-50 width-md-50 width-lg-85 width-xl-90 planet-shadow-purple"
                   src={purple}
-                  alt=""
+                  alt="purple"
                 />
               </div>
               <div className="col-lg-3"></div>
               <div className="col-lg-3 text-center">
                 <img
                   className="width-50 width-md-50 width-lg-85 width-xl-90 planet-shadow-yellow"
+                  
                   src={yellow}
-                  alt=""
-                  srcset=""
+                  alt="yellow"
                 />
               </div>
               <div className="col-lg-3"></div>
@@ -151,7 +168,7 @@ const SecondScreen = () => {
               <img
                 className="position-absolute second-screen-pathway px-0"
                 src={pathway}
-                alt=""
+                alt="pathway"
               />
               <div className="col-lg-3 text-center text-dark-blue mt-4 pt-4">
                 <h4 className="mb-2 space-grotesk-medium font-24">Planet A</h4>
@@ -176,8 +193,8 @@ const SecondScreen = () => {
                 <img
                   className="width-50 width-md-50 width-lg-85 width-xl-90 planet-shadow-green"
                   src={green}
-                  alt=""
-                  srcset=""
+                  alt="greenplnt"
+                  
                 />
                 <div className=" text-center text-dark-blue">
                   <h4 className="mb-2 space-grotesk-medium font-24">Planet B</h4>
@@ -192,8 +209,8 @@ const SecondScreen = () => {
                 <img
                   className="width-50 width-md-50 width-lg-85 width-xl-90 planet-shadow-blue"
                   src={blue}
-                  alt=""
-                  srcset=""
+                  alt="blueplnt"
+                  
                 />
                 <div className=" text-center text-dark-blue">
                   <h4 className="mb-2 space-grotesk-medium font-24">Planet D</h4>
@@ -224,11 +241,11 @@ const SecondScreen = () => {
                         ></button>
                       </div>
                       <div className="modal-body position-relative background-push-notification rounded-3 d-flex justify-content-between align-items-center">
-                        <div className="">
+                        <div className="alien-ship">
                           <img
                             className="position-absolute progress-foot-alen"
                             src={alenship}
-                            alt=""
+                            alt="alenship"
                           />
                         </div>
                         <span className="py-4 font-18 space-grotesk-medium text-white">
