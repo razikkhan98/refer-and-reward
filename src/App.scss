@@ -96,6 +96,9 @@
 .font-size-28 {
   font-size: 28px;
 }
+.font-size-40 {
+  font-size: 40px;
+}
 .font-size-46 {
   font-size: 46px;
 }
@@ -236,6 +239,10 @@
   left: -16.7%;
 }
 
+.till-ship {
+  background-color: rgba(64, 123, 255, 0.3);
+}
+
 .progress-sect-rocket {
   top: -82%;
   left: 2%;
@@ -310,6 +317,21 @@
   top: 10%;
   right: 31%;
 }
+.gift-circle-sec {
+  margin-right: 0;
+  transition: margin-right 1s ease; /* 1 second transition */
+}
+.gift-circle-sec:hover {
+  margin-right: 7rem;
+}
+.playearn-circle-sec {
+  margin-left: 0;
+  transition: margin-left 1s ease; /* 1 second transition */
+}
+.playearn-circle-sec:hover {
+  margin-left: 7rem;
+}
+
 .launch-rocket {
   bottom: 18%;
 }
@@ -347,6 +369,18 @@
     rgba(10, 28, 69, 0.8) 100%
   );
 }
+.play-earn-img {
+  left: 50%;
+  transform: translate(-40%, -2%);
+  top: 2%;
+}
+.play-img-eft{
+width: 0%;
+}
+.play-img-eft-act {
+  transition: width 0.5s ease;
+  width: 20%;
+}
 .pay-earn-content .row {
   background-color: rgba(255, 255, 255, 0.5);
 }
@@ -360,6 +394,7 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   z-index: 10;
 }
+
 /* ==================== PLAY AND EARN SECTIONS CSS END ==================================== */
 
 /* =================== MEDIA QUERY ===============================*/
@@ -381,6 +416,7 @@
     width: 70%;
   }
 }
+
 
 @media only screen and (min-width: 700px) and (max-width: 1023px) {
   .bg-planet-ring {
@@ -413,6 +449,7 @@
     bottom: 50%;
     left: 20%;
   }
+
 }
 
 /* =================== MEDIA QUERY END ========================== */

@@ -33,7 +33,7 @@ const SecondScreen = () => {
             </span>
           </div>
           <div className="col-lg-3 px-4 mt-4">
-            <div className="till-ship position-relative background-light-blue tilte-shadow rounded-3">
+            <div className="till-ship position-relative tilte-shadow rounded-3">
               <img
                 className="position-absolute till-ship-img"
                 src={tiltship}
@@ -61,7 +61,7 @@ const SecondScreen = () => {
             </p>
             <div className="progress-sect rounded-4">
               <ul className="list-unstyled mb-0 ps-4 pt-1">
-                <li className="d-flex pt-2">
+                <li className="d-flex pt-2 mt-3">
                   <div className="d-grid progress-side-sec">
                     <img className="w-50 mx-auto" src={prgicon} alt="prgicon" />{' '}
                     <hr className="progress-side-hr" />
