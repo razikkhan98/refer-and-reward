@@ -139,7 +139,7 @@
 .hero-section {
   height: 100vh;
   background-image: url(../src/assets/HeroBanner/filebackground.png);
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -162,25 +162,25 @@
 
 .navitag-left {
   position: absolute;
-  left: -2%;
-  width: 7%;
-  bottom: 20%;
+  left: -5%;
+  width: 10%;
+  bottom: 15%;
 }
 .navitag-right {
   position: absolute;
-  right: -2%;
-  width: 7%;
-  bottom: 20%;
+  right: -5%;
+  width: 10%;
+  bottom: 15%;
 }
 
 .navi-plnt-left {
   position: absolute;
-  bottom: 26%;
+  bottom: 22%;
   left: 7%;
 }
 .navi-plnt-right {
   position: absolute;
-  bottom: 26%;
+  bottom: 22%;
   right: 7%;
 }
 

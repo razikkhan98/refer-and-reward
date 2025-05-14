@@ -18,14 +18,6 @@ const Navbar = () => {
     setActiveIndex(index);
   };
 
-  // useEffect(() => {
-  //   const currentItem = navRefs.current[activeIndex];
-  //   if (currentItem && indicatorRef.current) {
-  //     indicatorRef.current.style.width = `${currentItem.offsetWidth}px`;
-  //     indicatorRef.current.style.left = `${currentItem.offsetLeft}px`;
-  //     indicatorRef.current.style.backgroundColor = '#fff';
-  //   }
-  // }, [activeIndex]);
   useEffect(() => {
     const currentItem = navRefs.current[activeIndex];
     if (currentItem && indicatorRef.current && blurShadowRef.current) {
@@ -51,12 +43,12 @@ const Navbar = () => {
                 {navItems?.map((i, index) => {
                   return !i?.img ? (
                     <li
-                      className={`list-unstyled list-background h-100 text-white fw-medium mt-4 pt-3`}
+                      className={`list-unstyled list-background h-100 text-white mt-4 pt-3`}
                     >
                       <span
                         data-active-color="orange"
                         ref={(el) => (navRefs.current[index] = el)}
-                        className={`nav-link px-3 ${activeIndex === index ? 'active' : ''
+                        className={`nav-link mx-3 ${activeIndex === index ? 'active space-grotesk-bold' : 'space-grotesk-medium'
                           }`}
                         onClick={() => handleClick(index)}
                       >
