@@ -24,12 +24,12 @@ function App() {
   }, []);
   return (
     <>
-    <Home/>
+    {/* <Home/> */}
       
       <SecondScreen />
-      <RedeemAndEarn/>
-      <PlayEarn/>
-      <Invitefriend/>
+      {/* <RedeemAndEarn/>
+      // <PlayEarn/>
+      <Invitefriend/> */}
     </>
   );
 }

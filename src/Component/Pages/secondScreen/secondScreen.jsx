@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 // import images
 import metero from '../../../assets/secondScreen/metero.svg';
-import tiltship from '../../../assets/secondScreen/tillship.svg';
+import tiltship from '../../../assets/secondScreen/tillship1.svg';
 import star from '../../../assets/secondScreen/star.svg';
 import borderstar from '../../../assets/secondScreen/bdrstar.svg';
 import prgicon from '../../../assets/secondScreen/prgicon.svg';
@@ -28,24 +28,24 @@ const SecondScreen = () => {
       <div className="container">
         <div className="row justify-content-between mt-4">
           <div className="col-lg-3">
-            <span className=" text-white d-flex font-size-14 fw-medium">
-              <img className="me-1" src={leftarrow} alt="leftarrow" /> Back
-            </span>
+            {/* <span className=" text-white d-flex font-size-14 fw-medium"> */}
+              {/* <img className="me-1" src={leftarrow} alt="leftarrow" /> Back */}
+            {/* </span> */}
           </div>
-          <div className="col-lg-3 px-4 mt-4">
-            <div className="till-ship position-relative tilte-shadow rounded-3">
+          <div className="col-lg-4 d-flex justify-content-end px-0 mt-4">
+            <div className="till-ship w-75 position-relative tilte-shadow rounded-3">
               <img
                 className="position-absolute till-ship-img"
                 src={tiltship}
                 alt="tiltship"
               />
-              <div className="py-2 offset-2 text-white">
+              <div className="py-2 offset-2 text-white d-flex justify-content-evenly align-items-center">
                 <span className="montserrat-bold font-14 fw-bold till-ship-border-color pe-3 z-1 position-relative">
                   300
                   <img className="my-1 mx-2" src={metero} alt="metero" />
-                  <span className="font-14 montserrat-semibol">Meteors</span>
+                  <span className="font-14 montserrat-semibold">Meteors</span>
                 </span>
-                <span className="font-14 montserrat-semibol ms-3">
+                <span className="font-14 montserrat-semibold">
                   1
                   <img className="mx-1" src={star} alt="star" />
                   <span className="space-grotesk-medium">star</span>
@@ -54,7 +54,7 @@ const SecondScreen = () => {
             </div>
           </div>
         </div>
-        <div className="row justify-content-between">
+        <div className="row justify-content-between second-screen-xl ">
           <div className="col-lg-2 px-0 d-flex flex-column justify-content-between">
             <div className="left-sidebar-main-div">
               <p className="text-dark-blue space-grotesk-medium font-16 mb-3">
@@ -62,7 +62,7 @@ const SecondScreen = () => {
               </p>
               <div className='progress-sect rounded-4'>
                 <ul className="list-unstyled mb-0 ps-4 pt-1">
-                  <li className="d-flex pt-2">
+                  <li className="d-flex pt-2 mt-2">
                     <div className="d-grid progress-side-sec">
                       <img className="w-50 mx-auto" src={prgicon} alt="prgicon" />{' '}
                       <hr className="progress-side-hr" />
@@ -119,36 +119,36 @@ const SecondScreen = () => {
                 </div>
               </div>
             </div>
-            <div className="mt-5">
-              <div className="d-flex justify-content-evenly background-text-blue rounded-2 position-relative py-2 mb-56">
+            {/* <div className="mt-3"> */}
+              <div className="d-flex justify-content-evenly background-text-blue rounded-2 position-relative py-2 ">
                 <img
                   className="w-25 progress-sect-rocket position-absolute"
                   src={rocket}
                   alt="rocket"
                 />
-                <span className="text-white font-16 montserrat-semibold offset-3 me-3">
+                <span className="text-white font-16 montserrat-semibold offset-2">
                   Play & Earn
                 </span>
                 <img src={longarrow} alt="longarrow" />
               </div>
-              <div className="d-flex justify-content-evenly background-dark-pink mt-5 rounded-2 position-relative py-2">
+              <div className="d-flex justify-content-evenly background-dark-pink mt-0 rounded-2 position-relative py-2">
                 <img
                   className=" progress-sect-astronot position-absolute"
                   src={astronot}
                   alt="astronot"
                 />
-                <span className="text-white font-16 montserrat-semibol offset-3 me-3">
+                <span className="text-white font-16 montserrat-semibold offset-2 ">
                   Invite & Earn
                 </span>
                 <img src={longarrow} alt="longarrow" />
               </div>
-            </div>
+            {/* </div> */}
           </div>
           <div className="col-lg-9">
             <div className="row">
               <div className="col-lg-3 text-center">
                 <img
-                  className="width-50 width-md-50 width-lg-85 width-xl-90 planet-shadow-purple"
+                  className="width-50 width-md-50 width-lg-25 width-xl-70 planet-shadow-purple"
                   src={purple}
                   alt="purple"
                 />
@@ -156,7 +156,7 @@ const SecondScreen = () => {
               <div className="col-lg-3"></div>
               <div className="col-lg-3 text-center">
                 <img
-                  className="width-50 width-md-50 width-lg-85 width-xl-90 planet-shadow-yellow"
+                  className="width-50 width-md-50 width-lg-25 width-xl-70 planet-shadow-yellow"
                   
                   src={yellow}
                   alt="yellow"
@@ -170,7 +170,7 @@ const SecondScreen = () => {
                 src={pathway}
                 alt="pathway"
               />
-              <div className="col-lg-3 text-center text-dark-blue mt-4 pt-4">
+              <div className="col-lg-3 text-center text-dark-blue mt-4 pt-4 px-0">
                 <h4 className="mb-2 space-grotesk-medium font-24">Planet A</h4>
                 <p className="space-grotesk-regular font-14 my-0">
                   Complete the level and earn
@@ -178,7 +178,7 @@ const SecondScreen = () => {
                 <span className="space-grotesk-medium">1000 Meteors</span>
               </div>
               <div className="col-lg-3"></div>
-              <div className="col-lg-3 text-center text-dark-blue mt-4 pt-4">
+              <div className="col-lg-3 text-center text-dark-blue mt-4 pt-4 px-0">
                 <h4 className="mb-2 space-grotesk-medium font-24">Planet C</h4>
                 <p className="space-grotesk-regular font-14 my-0">
                   Little more consistency and
@@ -187,11 +187,11 @@ const SecondScreen = () => {
               </div>
               <div className="col-lg-3"></div>
             </div>
-            <div className="row mt-2">
+            <div className="row second-scrn-bottom">
               <div className="col-lg-3"></div>
-              <div className="col-lg-3 text-center text-dark-blue">
+              <div className="col-lg-3 text-center text-dark-blue second-scrn-padding">
                 <img
-                  className="width-50 width-md-50 width-lg-85 width-xl-90 planet-shadow-green"
+                  className="width-50 width-md-50 width-lg-25 width-xl-70 planet-shadow-green"
                   src={green}
                   alt="greenplnt"
                   
@@ -207,14 +207,14 @@ const SecondScreen = () => {
               <div className="col-lg-3"></div>
               <div className="col-lg-3 text-center text-dark-blue">
                 <img
-                  className="width-50 width-md-50 width-lg-85 width-xl-90 planet-shadow-blue"
+                  className="width-50 width-md-50 width-lg-25 width-xl-70 planet-shadow-blue"
                   src={blue}
                   alt="blueplnt"
                   
                 />
                 <div className=" text-center text-dark-blue">
                   <h4 className="mb-2 space-grotesk-medium font-24">Planet D</h4>
-                  <span className="space-grotesk-medium">3080 Meteors</span>Meteors to go
+                  <span className="space-grotesk-medium">3080 Meteors</span> to go
                   <p className="space-grotesk-regular font-14 my-0">
                     and your exclusive reward awaits!!!
                   </p>
@@ -235,7 +235,7 @@ const SecondScreen = () => {
                       <div className="modal-header border-0">
                         <button
                           type="button"
-                          className="btn-close bg-light p-2 mb-2 rounded-circle"
+                          className="btn-close bg-light p-1 font-8 mb-2 rounded-circle"
                           onClick={handleClose}
                           aria-label="Close"
                         ></button>

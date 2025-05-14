@@ -228,19 +228,17 @@
 .second-screen-section {
   height: 100vh;
   background-image: url(../src/assets/HeroBanner/secondscreenbg.png);
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
 }
-.till-ship{
+.till-ship {
   background: rgba(64, 123, 255, 0.3);
-
 }
 .till-ship-img {
-  top: -79%;
-  left: -16.7%;
-
+  left: -14.7%;
+  bottom: 0%;
 }
 
 .till-ship {
@@ -252,7 +250,7 @@
   left: 2%;
 }
 .progress-sect-astronot {
-  top: -99%;
+  bottom: 0%;
   width: 20%;
   left: 2%;
 }
@@ -279,12 +277,12 @@
 }
 .progress-side-hr {
   border: 2px solid rgba(255, 240, 96, 1);
-  height: 59px;
+  height: 30px;
   margin: 0 auto;
 }
-.progress-side-hr11{
+.progress-side-hr11 {
   border: 2px dashed rgba(255, 240, 96, 1);
-  height: 45px;
+  height: 24px;
   margin: 0 auto;
 }
 .progress-side-hr-2 {
@@ -293,7 +291,7 @@
   margin: 0 auto;
 }
 .progress-foot-alen {
-  left: -4.2%;
+  left: -5.2%;
   bottom: -1%;
 }
 .push-notification-close {
@@ -303,6 +301,12 @@
 .second-screen-pathway {
   width: 79% !important;
   transform: translate(12.5%, 0%);
+}
+.second-scrn-bottom {
+  margin-top: 8px !important;
+}
+.second-scrn-padding {
+  padding: auto !important;
 }
 
 /* ==================== SECOND SCREEN SECTIONS CSS END ==================================== */
@@ -383,8 +387,8 @@
   transform: translate(-40%, -2%);
   top: 2%;
 }
-.play-img-eft{
-width: 0%;
+.play-img-eft {
+  width: 0%;
 }
 .play-img-eft-act {
   transition: width 0.5s ease;
@@ -424,8 +428,19 @@ width: 0%;
     top: 50%;
     width: 70%;
   }
+  .second-scrn-bottom {
+    margin-top: 0px !important;
+  }
+  .second-scrn-padding {
+    padding: 0 !important;
+  }
+    .second-screen-xl {
+    margin-top: 0.5rem !important;
+  }
+  .till-ship-img {
+    left: -16.7% !important;
 }
-
+}
 
 @media only screen and (min-width: 700px) and (max-width: 1023px) {
   .bg-planet-ring {
@@ -458,7 +473,12 @@ width: 0%;
     bottom: 50%;
     left: 20%;
   }
+}
 
+@media only screen and (min-width: 1600px) and (max-width: 1920px) {
+  .second-screen-xl {
+    margin-top: 4rem !important;
+  }
 }
 
 /* =================== MEDIA QUERY END ========================== */
