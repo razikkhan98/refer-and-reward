@@ -12,7 +12,7 @@ const Home = () => {
       <Herosection />
       <PlanetSlider />
     </section>
-     <Invitefriend/>
+     {/* <Invitefriend/> */}
      </>
     
   );

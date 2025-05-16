@@ -43,6 +43,7 @@
   --dark-pink: rgba(224, 77, 176, 1);
   --push-notification: rgba(157, 146, 210, 1);
   --light-yellow: rgba(255, 217, 57, 1);
+  --text-light-black: rgba(51, 51, 51, 1);
 }
 
 /* ================ font colors ============== */
@@ -60,6 +61,9 @@
 }
 .text-light-yellow {
   color: var(--light-yellow);
+}
+.text-light-black {
+  color: var(--text-light-black);
 }
 /* ============================================= */
 
@@ -95,6 +99,9 @@
 }
 .font-size-28 {
   font-size: 28px;
+}
+.font-size-40 {
+  font-size: 40px;
 }
 .font-size-46 {
   font-size: 46px;
@@ -225,19 +232,21 @@
 .second-screen-section {
   height: 100vh;
   background-image: url(../src/assets/HeroBanner/secondscreenbg.png);
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
 }
-.till-ship{
+.till-ship {
   background: rgba(64, 123, 255, 0.3);
-
 }
 .till-ship-img {
-  top: -79%;
-  left: -16.7%;
+  left: -14.7%;
+  bottom: 0%;
+}
 
+.till-ship {
+  background-color: rgba(64, 123, 255, 0.3);
 }
 
 .progress-sect-rocket {
@@ -245,7 +254,7 @@
   left: 2%;
 }
 .progress-sect-astronot {
-  top: -99%;
+  bottom: 0%;
   width: 20%;
   left: 2%;
 }
@@ -272,12 +281,12 @@
 }
 .progress-side-hr {
   border: 2px solid rgba(255, 240, 96, 1);
-  height: 59px;
+  height: 30px;
   margin: 0 auto;
 }
-.progress-side-hr11{
+.progress-side-hr11 {
   border: 2px dashed rgba(255, 240, 96, 1);
-  height: 45px;
+  height: 24px;
   margin: 0 auto;
 }
 .progress-side-hr-2 {
@@ -286,7 +295,7 @@
   margin: 0 auto;
 }
 .progress-foot-alen {
-  left: -4.2%;
+  left: -5.2%;
   bottom: -1%;
 }
 .push-notification-close {
@@ -296,6 +305,12 @@
 .second-screen-pathway {
   width: 79% !important;
   transform: translate(12.5%, 0%);
+}
+.second-scrn-bottom {
+  margin-top: 8px !important;
+}
+.second-scrn-padding {
+  padding: auto !important;
 }
 
 /* ==================== SECOND SCREEN SECTIONS CSS END ==================================== */
@@ -319,6 +334,21 @@
   top: 10%;
   right: 31%;
 }
+.gift-circle-sec {
+  margin-right: 0;
+  transition: margin-right 1s ease; /* 1 second transition */
+}
+.gift-circle-sec:hover {
+  margin-right: 7rem;
+}
+.playearn-circle-sec {
+  margin-left: 0;
+  transition: margin-left 1s ease; /* 1 second transition */
+}
+.playearn-circle-sec:hover {
+  margin-left: 7rem;
+}
+
 .launch-rocket {
   bottom: 18%;
 }
@@ -356,6 +386,18 @@
     rgba(10, 28, 69, 0.8) 100%
   );
 }
+.play-earn-img {
+  left: 50%;
+  transform: translate(-50%, -0%);
+  top: 2%;
+}
+.play-img-eft {
+  width: 0%;
+}
+.play-img-eft-act {
+  transition: width 0.5s ease;
+  width: 20%;
+}
 .pay-earn-content .row {
   background-color: rgba(255, 255, 255, 0.5);
 }
@@ -369,7 +411,112 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   z-index: 10;
 }
+
 /* ==================== PLAY AND EARN SECTIONS CSS END ==================================== */
+/* ==================== OFFER SECTIONS CSS ==================================== */
+.offer-section {
+  background-image: url(../src/assets/offer/offerbg.png);
+  width: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // height: 100vh;
+}
+
+.offer-bg-img-1 {
+  background-image: url(../src/assets/offer/card3bg.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.offer-bg-img-2,
+.offer-bg-img-4 {
+  background-image: url(../src/assets/offer/card2bg.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.offer-bg-img-3 {
+  background-image: url(../src/assets/offer/card1bg.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.offer-cards {
+  border-radius: 24px;
+  height: 307px;
+}
+.offer-slider .slick-slide {
+  padding: 0px 24px 0px 0px !important;
+  box-sizing: border-box;
+}
+.offer-slider .slick-arrow {
+  display: none !important;
+}
+.offer-exc-card {
+  width: 410px !important;
+}
+.offer-exc-rocket {
+  left: 12%;
+  bottom: 45%;
+}
+.price-trolley {
+  border-radius: 70px 20px 20px 20px;
+  background-image: url(../src/assets/offer/exclperk1.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 491px;
+}
+.price-watch {
+  border-radius: 20px;
+  background-image: url(../src/assets/offer/exclperk2.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 233px;
+}
+.price-headphone {
+  border-radius: 20px 20px 70px 20px;
+  background-image: url(../src/assets/offer/exclperk3.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 233px;
+}
+.purple-border-bottom {
+  border-bottom: 1px solid var(--push-notification);
+}
+
+.offer-footer-section {
+  background-image: url(../src/assets/offer/Footer.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 558px;
+  z-index: 9;
+  overflow: hidden;
+}
+.footer-semi-planet {
+  background-image: url(../src/assets/offer/semiplanet.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50%;
+  height: 94%;
+  bottom: 0%;
+  z-index: 1;
+  left: 25%;
+}
+
+.price-exclusive{
+  // grid-auto-columns: 1rf 1rf 1rf;
+  grid-template-columns: auto auto auto;
+}
+
+/* ==================== OFFER SECTIONS CSS END ==================================== */
 
 /* =================== MEDIA QUERY ===============================*/
 
@@ -388,6 +535,18 @@
   .bg-planet-ring {
     top: 50%;
     width: 70%;
+  }
+  .second-scrn-bottom {
+    margin-top: 0px !important;
+  }
+  .second-scrn-padding {
+    padding: 0 !important;
+  }
+  .second-screen-xl {
+    margin-top: 0.5rem !important;
+  }
+  .till-ship-img {
+    left: -16.7% !important;
   }
 }
 
@@ -421,6 +580,12 @@
     position: absolute;
     bottom: 50%;
     left: 20%;
+  }
+}
+
+@media only screen and (min-width: 1600px) and (max-width: 1920px) {
+  .second-screen-xl {
+    margin-top: 4rem !important;
   }
 }
 

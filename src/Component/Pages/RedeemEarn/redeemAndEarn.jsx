@@ -13,11 +13,12 @@ const RedeemAndEarn = () => {
       className="hero-section d-flex justify-content-center align-items-center px-5"
       id=""
     >
-      <div className="redeem-box position-relative w-50 p-5 bg-opacity-25 bg-light rounded"
+      <div
+        className="redeem-box position-relative w-50 p-5 bg-opacity-25 bg-light rounded"
         data-aos="fade-up"
-          data-aos-offset="300"
-          data-aos-easing="ease-in-sine"
-          // data-aos-duration="500"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+        // data-aos-duration="500"
       >
         <div
           className="redeem-circle-sect position-absolute"
@@ -25,7 +26,7 @@ const RedeemAndEarn = () => {
           data-aos-offset="600"
           data-aos-easing="ease-in-sine"
         >
-          <div className="redeem-circle redeem-shadow position-relative d-flex justify-content-center align-items-center">
+          <div className="redeem-circle gift-circle-sec redeem-shadow position-relative d-flex justify-content-center align-items-center">
             <img
               className="position-absolute redem-box"
               src={redeembox}
@@ -65,7 +66,7 @@ const RedeemAndEarn = () => {
           data-aos-offset="300"
           data-aos-easing="ease-in-sine"
         >
-          <div className="redeem-circle earn-shadow position-relative d-flex justify-content-center align-items-center">
+          <div className="redeem-circle playearn-circle-sec earn-shadow position-relative d-flex justify-content-center align-items-center">
             <img
               className="position-absolute coins-box"
               src={coins}
