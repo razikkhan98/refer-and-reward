@@ -92,7 +92,7 @@ const PlayEarn = () => {
               src={spinwheel}
               alt="spinwheel"
             />
-            <div className="row justify-content-between mb-5 p-4 rounded-4"
+            <div className="row justify-content-between p-4 rounded-4"
             data-aos="fade-up"
             data-aos-duration="600"
             data-aos-delay="500"

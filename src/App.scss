@@ -43,6 +43,7 @@
   --dark-pink: rgba(224, 77, 176, 1);
   --push-notification: rgba(157, 146, 210, 1);
   --light-yellow: rgba(255, 217, 57, 1);
+  --text-light-black: rgba(51, 51, 51, 1);
 }
 
 /* ================ font colors ============== */
@@ -60,6 +61,9 @@
 }
 .text-light-yellow {
   color: var(--light-yellow);
+}
+.text-light-black {
+  color: var(--text-light-black);
 }
 /* ============================================= */
 
@@ -384,7 +388,7 @@
 }
 .play-earn-img {
   left: 50%;
-  transform: translate(-40%, -2%);
+  transform: translate(-50%, -0%);
   top: 2%;
 }
 .play-img-eft {
@@ -409,6 +413,110 @@
 }
 
 /* ==================== PLAY AND EARN SECTIONS CSS END ==================================== */
+/* ==================== OFFER SECTIONS CSS ==================================== */
+.offer-section {
+  background-image: url(../src/assets/offer/offerbg.png);
+  width: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // height: 100vh;
+}
+
+.offer-bg-img-1 {
+  background-image: url(../src/assets/offer/card3bg.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.offer-bg-img-2,
+.offer-bg-img-4 {
+  background-image: url(../src/assets/offer/card2bg.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.offer-bg-img-3 {
+  background-image: url(../src/assets/offer/card1bg.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.offer-cards {
+  border-radius: 24px;
+  height: 307px;
+}
+.offer-slider .slick-slide {
+  padding: 0px 24px 0px 0px !important;
+  box-sizing: border-box;
+}
+.offer-slider .slick-arrow {
+  display: none !important;
+}
+.offer-exc-card {
+  width: 410px !important;
+}
+.offer-exc-rocket {
+  left: 12%;
+  bottom: 45%;
+}
+.price-trolley {
+  border-radius: 70px 20px 20px 20px;
+  background-image: url(../src/assets/offer/exclperk1.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 491px;
+}
+.price-watch {
+  border-radius: 20px;
+  background-image: url(../src/assets/offer/exclperk2.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 233px;
+}
+.price-headphone {
+  border-radius: 20px 20px 70px 20px;
+  background-image: url(../src/assets/offer/exclperk3.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 233px;
+}
+.purple-border-bottom {
+  border-bottom: 1px solid var(--push-notification);
+}
+
+.offer-footer-section {
+  background-image: url(../src/assets/offer/Footer.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 558px;
+  z-index: 9;
+  overflow: hidden;
+}
+.footer-semi-planet {
+  background-image: url(../src/assets/offer/semiplanet.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50%;
+  height: 94%;
+  bottom: 0%;
+  z-index: 1;
+  left: 25%;
+}
+
+.price-exclusive{
+  // grid-auto-columns: 1rf 1rf 1rf;
+  grid-template-columns: auto auto auto;
+}
+
+/* ==================== OFFER SECTIONS CSS END ==================================== */
 
 /* =================== MEDIA QUERY ===============================*/
 
@@ -434,12 +542,12 @@
   .second-scrn-padding {
     padding: 0 !important;
   }
-    .second-screen-xl {
+  .second-screen-xl {
     margin-top: 0.5rem !important;
   }
   .till-ship-img {
     left: -16.7% !important;
-}
+  }
 }
 
 @media only screen and (min-width: 700px) and (max-width: 1023px) {
