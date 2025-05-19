@@ -7,7 +7,7 @@ import Invitefriend from '../../Common/Invitefriend/invitefriend';;
 const Home = () => {
   return (
     <>
-    <section className="hero-section  position-relative" id="">
+    <section className="hero-section  position-relative" >
       <Navbar />
       <Herosection />
       <PlanetSlider />

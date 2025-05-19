@@ -209,16 +209,16 @@ const Offer = () => {
           </div>
         </div>
         {/* Win Exciting Prizes SECTION */}
-        <h1 className="text-dark-blue mt-120 mb-4 pb-4 ">
+        <h2 className="text-dark-blue mt-120 mb-4 pb-4 ">
           Win Exciting Prizes
-        </h1>
+        </h2>
         <div className="row justify-content-between">
           <div className="col-lg-6 shadow-lg d-flex justify-content-between price-trolley">
             <div className="col-lg-8 py-5 ps-5">
               <div className="head-content mb-5 pb-5">
-                <h1 className="font-24 montserrat-medium text-white mb-2">
+                <h2 className="font-24 montserrat-medium text-white mb-2">
                   Exciting Chance to Win a Trolley Bag!!
-                </h1>
+                </h2>
                 <p className="font-14 montserrat-light text-white mb-5 pb-5">
                   *Terms & Conditions Applied*
                 </p>
@@ -236,7 +236,7 @@ const Offer = () => {
                 </span>
               </div>
             </div>
-            <div className="col-lg-4 d-flex">
+            <div className="col-lg-4 d-flex justify-content-start">
               <img className="align-self-end" src={suitcase} alt="" />
             </div>
           </div>
@@ -256,7 +256,7 @@ const Offer = () => {
                   </span>
                 </div>
               </div>
-              <div className="col-lg-4 d-flex align-items-center">
+              <div className="col-lg-4 d-flex align-items-center ">
                 <img src={smartwatch} alt="smartwatch" />
               </div>
             </div>
@@ -282,9 +282,9 @@ const Offer = () => {
           </div>
         </div>
         {/* FAQ SECTION */}
-        <h1 className="text-dark-blue mt-120 mb-1 pb-1 ">
+        <h2 className="text-dark-blue mt-120 mb-1 pb-1 ">
           Frequently Asked Questions
-        </h1>
+        </h2>
         <div className="row">
           <div className="accordion">
             {items.map((item, index) => (
@@ -327,7 +327,7 @@ const Offer = () => {
       {/* FOOTER SECTION */}
       <div className="offer-footer position-relative overflow-hidden mt-5">
         <div className="offer-footer-section position-relative d-flex justify-content-center text-center">
-          <p className="width-16 mb-5 text-white align-self-end">
+          <p className="width-36 font-32 space-grotesk-medium mb-5 text-white align-self-end">
             The more you refer, the brighter your rewards shine!
           </p>
         </div>

@@ -24,11 +24,11 @@ const SecondScreen = () => {
   const handleClose = () => setShowModal(false);
   const handleOpen = () => setShowModal(true);
   return (
-    <section className="second-screen-section position-relative" id="">
+    <section className="second-screen-section position-relative">
       <div className="container">
         <div className="row justify-content-between mt-4">
           <div className="col-lg-3">
-            {/* <span className=" text-white d-flex font-size-14 fw-medium"> */}
+            {/* <span className=" text-white d-flex font-size-14 montserrat-medium"> */}
               {/* <img className="me-1" src={leftarrow} alt="leftarrow" /> Back */}
             {/* </span> */}
           </div>
@@ -40,7 +40,7 @@ const SecondScreen = () => {
                 alt="tiltship"
               />
               <div className="py-2 offset-2 text-white d-flex justify-content-evenly align-items-center">
-                <span className="montserrat-bold font-14 fw-bold till-ship-border-color pe-3 z-1 position-relative">
+                <span className="montserrat-bold font-14 montserrat-bold till-ship-border-color pe-3 z-1 position-relative">
                   300
                   <img className="my-1 mx-2" src={metero} alt="metero" />
                   <span className="font-14 montserrat-semibold">Meteors</span>

@@ -11,7 +11,7 @@ const RedeemAndEarn = () => {
   return (
     <section
       className="hero-section d-flex justify-content-center align-items-center px-5"
-      id=""
+      
     >
       <div
         className="redeem-box position-relative w-50 p-5 bg-opacity-25 bg-light rounded"
@@ -41,11 +41,11 @@ const RedeemAndEarn = () => {
             <div className="redeem-circle-cont text-center">
               <h2 className="text-white mb-0 font-size-24 ms-5 ps-3">Redeem</h2>
               <div className="text-white d-flex justify-content-center align-items-center ms-5 ps-4">
-                <span className="text-light-yellow font-size-12 fw-semibold">
+                <span className="text-light-yellow font-size-12 montserrat-semibold">
                   150
                 </span>
                 <img className="mx-1" src={metero} alt="metero" />
-                <span className="font-size-14 fw-medium">Total Meteors</span>
+                <span className="font-size-14 montserrat-medium">Total Meteors</span>
               </div>
             </div>
             <img
@@ -55,7 +55,7 @@ const RedeemAndEarn = () => {
             />
           </div>
         </div>
-        <p className="text-center font-32 fw-medium px-5 pt-4 text-dark-blue">
+        <p className="text-center font-32 space-grotesk-medium px-5 pt-4 text-dark-blue">
           Earn more with every action and redeem for real rewards on your
           journey through the stars
         </p>
@@ -83,11 +83,11 @@ const RedeemAndEarn = () => {
                 Earn More
               </h2>
               <div className="text-white d-flex justify-content-center align-items-center ms-5 ps-4">
-                <span className="text-light-yellow font-size-12 fw-semibold">
+                <span className="text-light-yellow font-size-12 montserrat-semibold">
                   150
                 </span>
                 <img className="mx-1" src={metero} alt="metero" />
-                <span className="font-size-14 fw-medium">Total Meteors</span>
+                <span className="font-size-14 montserrat-medium">Total Meteors</span>
               </div>
             </div>
             <img
