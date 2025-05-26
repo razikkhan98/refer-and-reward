@@ -106,10 +106,10 @@ const Offer = () => {
                 key={index}
               >
                 <div className="col-lg-7 ms-3 ps-3 my-3 py-3 d-grid align-items-end">
-                  <h3 className="text-white font-36 montserrat-semibold mb-2 pb-1 lh-sm">
+                  <h3 className="text-white font-36 montserrat-semibold mb-2 pb-1 truncate-text-2 lh-sm">
                     {card.title}
                   </h3>
-                  <p className="text-white font-20 montserrat-regular mb-4 pb-3 lh-sm">
+                  <p className="text-white font-20 montserrat-regular mb-4 pb-3 truncate-text-3 lh-sm">
                     {card.content}
                   </p>
                   <a
@@ -213,9 +213,9 @@ const Offer = () => {
           Win Exciting Prizes
         </h2>
         <div className="row justify-content-between">
-          <div className="col-lg-6 shadow-lg d-flex justify-content-between price-trolley">
-            <div className="col-lg-8 py-5 ps-5">
-              <div className="head-content mb-5 pb-5">
+          <div className="col-lg-6 shadow-lg d-flex justify-content-between px-0 price-trolley">
+            <div className="col-lg-8 pt-5 ps-5 d-grid">
+              <div className="head-content ">
                 <h2 className="font-24 montserrat-medium text-white mb-2">
                   Exciting Chance to Win a Trolley Bag!!
                 </h2>
@@ -223,7 +223,8 @@ const Offer = () => {
                   *Terms & Conditions Applied*
                 </p>
               </div>
-              <h4 className="font-40 montserrat-medium text-white mb-0">
+              <div className="section-offer align-self-end mb-3 pb-1">
+                <h4 className="font-40 montserrat-medium text-white mb-0">
                 Collect
               </h4>
               <div className="d-flex align-items-center">
@@ -235,14 +236,15 @@ const Offer = () => {
                   Total Meteors
                 </span>
               </div>
+              </div>
             </div>
             <div className="col-lg-4 d-flex justify-content-start">
-              <img className="align-self-end" src={suitcase} alt="" />
+              <img className="align-self-end mb-1" src={suitcase} alt="" />
             </div>
           </div>
           <div className="col-lg-6 px-4 d-grid">
             <div className="col-lg-12 shadow-lg py-3 d-flex price-watch align-self-start">
-              <div className="col-lg-8  ms-3 ps-3 align-self-end mb-1">
+              <div className="col-lg-8  ms-4 ps-4 align-self-end mb-1">
                 <h4 className="font-40 montserrat-medium text-white mb-0">
                   Collect
                 </h4>
@@ -260,8 +262,8 @@ const Offer = () => {
                 <img src={smartwatch} alt="smartwatch" />
               </div>
             </div>
-            <div className="col-lg-12 py-1 shadow-lg d-flex price-headphone align-self-end">
-              <div className="col-lg-8  ms-3 ps-3 align-self-end mb-2">
+            <div className="col-lg-12 py-3 shadow-lg d-flex price-headphone align-self-end">
+              <div className="col-lg-8  ms-4 ps-4 align-self-end mb-1">
                 <h4 className="font-40 montserrat-medium text-white mb-0">
                   Collect
                 </h4>

@@ -3,16 +3,15 @@ import navCenterImg from '../../../assets/navbar/navCenterImg.svg';
 const Navbar = () => {
   const navItems = [
     { label: 'Home', color: 'orange' },
-    { label: 'About', color: 'green' },
+    { label: 'My Rewards', color: 'green' },
     { img: navCenterImg },
-    { label: 'Testimonials', color: 'blue' },
-    { label: 'Contact', color: 'rebeccapurple' },
+    { label: 'My Referrals', color: 'blue' },
+    { label: 'Profile', color: 'rebeccapurple' },
   ];
   const indicatorRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const navRefs = useRef([]);
   const blurShadowRef = useRef(null);
-
 
   const handleClick = (index) => {
     setActiveIndex(index);
@@ -22,17 +21,17 @@ const Navbar = () => {
     const currentItem = navRefs.current[activeIndex];
     if (currentItem && indicatorRef.current && blurShadowRef.current) {
       const { offsetWidth, offsetLeft, offsetTop } = currentItem;
-  
+
       indicatorRef.current.style.width = `${offsetWidth}px`;
       indicatorRef.current.style.left = `${offsetLeft}px`;
       indicatorRef.current.style.backgroundColor = '#fff';
-  
+
       blurShadowRef.current.style.width = `200px`; // fixed width as per your CSS
-      blurShadowRef.current.style.left = `${offsetLeft - 50}px`; // offset slightly for blur effect
+      blurShadowRef.current.style.left = `${offsetLeft - 60}px`; // offset slightly for blur effect
       // blurShadowRef.current.style.top = `${offsetTop}px`;
     }
   }, [activeIndex]);
-  
+
   return (
     <section className="header-section">
       <nav class="navbar navbar-expand-lg  my-0 py-0">
@@ -48,8 +47,11 @@ const Navbar = () => {
                       <span
                         data-active-color="orange"
                         ref={(el) => (navRefs.current[index] = el)}
-                        className={`nav-link mx-3 ${activeIndex === index ? 'active space-grotesk-bold' : 'space-grotesk-medium'
-                          }`}
+                        className={`nav-link mx-3 ${
+                          activeIndex === index
+                            ? 'active space-grotesk-bold'
+                            : 'space-grotesk-medium'
+                        }`}
                         onClick={() => handleClick(index)}
                       >
                         {i?.label}
@@ -70,10 +72,9 @@ const Navbar = () => {
                   ref={indicatorRef}
                 ></span>
                 <span
-  className="active-blur-shadow position-absolute"
-  ref={blurShadowRef}
-/>
-
+                  className="active-blur-shadow position-absolute"
+                  ref={blurShadowRef}
+                />
               </ul>
             </div>
           </div>

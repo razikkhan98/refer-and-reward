@@ -16,6 +16,8 @@ import Home from './Component/Pages/Home/home';
 import PlayEarn from './Component/Pages/palyEarn/playEarn';
 import Invitefriend from './Component/Common/Invitefriend/invitefriend';
 import Offer from './Component/Pages/Offers/offer';
+import Howitworksfirst from './Component/Common/HowItWorks/howitworkfirst';
+import Howitworks from './Component/Common/HowItWorks/howitworks';
 function App() {
   useEffect(() => {
     AOS.init({
@@ -25,13 +27,14 @@ function App() {
   }, []);
   return (
     <>
-      {/* <Home />
-
-      // <SecondScreen /> */}
-      {/* <RedeemAndEarn/> */}
-      <PlayEarn/>
-      {/* <Invitefriend /> */}
-      <Offer/>
+      <Home />
+      <SecondScreen />
+      <Invitefriend />
+      <Howitworksfirst />
+      <Howitworks />
+      <RedeemAndEarn />
+      <PlayEarn />
+      <Offer />
     </>
   );
 }
