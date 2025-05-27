@@ -48,6 +48,9 @@
   --push-notification: rgba(157, 146, 210, 1);
   --light-yellow: rgba(255, 217, 57, 1);
   --text-light-black: rgba(51, 51, 51, 1);
+  --light-white: rgba(239, 243, 247, 0.7);
+  --light-white-2: rgba(239, 243, 247, 1);
+  --light-cream:rgba(255, 242, 178, 1);
 }
 
 /* ================ font colors ============== */
@@ -85,6 +88,16 @@
 .background-push-notification {
   background-color: var(--push-notification) !important;
 }
+.background-light-white {
+  background-color: var(--light-white);
+}
+.background-light-white-2 {
+  background-color: var(--light-white-2);
+}
+.background-light-cream {
+  background-color: var(--light-cream);
+}
+
 
 /* ============================================= */
 
@@ -111,6 +124,12 @@
   font-size: 46px;
 }
 /* ============================================ */
+
+// =============== BORDER ================================================
+.border-blue {
+  border: 1px solid var(--text-blue);
+}
+// =======================================================================
 
 /* ===================== Navbar Or Header Css ============================ */
 
@@ -542,6 +561,7 @@
   // grid-auto-columns: 1rf 1rf 1rf;
   grid-template-columns: auto auto auto;
 }
+
 .truncate-text-2 {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -555,7 +575,81 @@
   overflow: hidden;
 }
 
+
 /* ==================== OFFER SECTIONS CSS END ==================================== */
+
+/* ==================== MYREWARD SECTIONS CSS ==================================== */
+.myreward-card-1 {
+  background-image: url(../src/assets/MyRewards/starsbg.png);
+  background-position: center;
+  background-size: cover;
+}
+.myreward-card-2 {
+  background-image: url(../src/assets/MyRewards/withoutstarsbg.png);
+  background-position: center;
+  background-size: cover;
+}
+.myreward-star {
+  top: -32%;
+  right: -10%;
+}
+.myreward-pocket {
+  top: -7%;
+  right: 3%;
+}
+.myreward-shotingmeteor {
+  right: 8%;
+  bottom: 24%;
+}
+
+.my-reward-cards {
+  grid-template-columns: auto auto;
+}
+.reward-slider .slick-slide {
+  margin: 0px 10px;
+}
+.reward-moving-rkt {
+  bottom: 4%;
+  left: 2%;
+  width: 8%;
+}
+
+.reward-discount{
+  background-image: url(../src/assets/MyRewards/discountbg.png);
+}
+.discount-border{
+  border-radius: 0px 8px 0px 8px;
+}
+// .excl-discount .slick-track{
+//   display: flex;
+// }
+// .excl-discount .slick-slide{
+// margin: 16px;
+// }
+// .excl-discount .slick-slide{
+// // width: 29vw !important;
+// }
+// .excl-discount-card{
+//   // width: 28vw !important;
+// // margin-right: 2rem !important;
+//   // padding: 0px 30px !important;
+  
+// }
+
+.excl-discount .slick-track {
+  display: flex;
+}
+
+.excl-discount .slick-slide {
+  margin: 0 8px !important; /* Adjust margin if needed */
+}
+
+/* Optional: Make sure the slider container has appropriate width */
+.slider-container {
+  padding: 0 20px !important; /* Keep enough space for partial slides */
+}
+
+/* ==================== MYREWARD SECTIONS CSS END ==================================== */
 
 /* =================== MEDIA QUERY ===============================*/
 

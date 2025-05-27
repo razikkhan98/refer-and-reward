@@ -185,3 +185,10 @@ $spacing-values: 0, 4, 8, 10, 12, 14, 16, 20, 24, 32,34, 36, 40, 44, 46, 48, 52,
   }
 }
 
+
+// Generate border-radius classes from 4px to 100px in steps of 4px
+@each $value in $spacing-values {
+  .border-radius-#{$value} {
+    border-radius: pxToRem($value);
+  }
+}
