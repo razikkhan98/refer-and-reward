@@ -11,6 +11,10 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+#root {
+  overflow-x: hidden;
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -43,6 +47,10 @@
   --dark-pink: rgba(224, 77, 176, 1);
   --push-notification: rgba(157, 146, 210, 1);
   --light-yellow: rgba(255, 217, 57, 1);
+  --text-light-black: rgba(51, 51, 51, 1);
+  --light-white: rgba(239, 243, 247, 0.7);
+  --light-white-2: rgba(239, 243, 247, 1);
+  --light-cream:rgba(255, 242, 178, 1);
 }
 
 /* ================ font colors ============== */
@@ -61,6 +69,9 @@
 .text-light-yellow {
   color: var(--light-yellow);
 }
+.text-light-black {
+  color: var(--text-light-black);
+}
 /* ============================================= */
 
 /* ================ background colors ================ */
@@ -77,6 +88,16 @@
 .background-push-notification {
   background-color: var(--push-notification) !important;
 }
+.background-light-white {
+  background-color: var(--light-white);
+}
+.background-light-white-2 {
+  background-color: var(--light-white-2);
+}
+.background-light-cream {
+  background-color: var(--light-cream);
+}
+
 
 /* ============================================= */
 
@@ -85,21 +106,30 @@
   font-size: 14px;
 }
 .font-size-16 {
-  font-size: 16px;
+  font-size: 16px !important;
 }
 .font-size-18 {
   font-size: 18px;
 }
 .font-size-24 {
-  font-size: 24px;
+  font-size: 24px !important;
 }
 .font-size-28 {
   font-size: 28px;
+}
+.font-size-40 {
+  font-size: 40px;
 }
 .font-size-46 {
   font-size: 46px;
 }
 /* ============================================ */
+
+// =============== BORDER ================================================
+.border-blue {
+  border: 1px solid var(--text-blue);
+}
+// =======================================================================
 
 /* ===================== Navbar Or Header Css ============================ */
 
@@ -121,23 +151,23 @@
 }
 
 .active-blur-shadow {
-  background-image: url('./assets/HeroBanner/bg-blur.svg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 0;
   height: 100%;
   width: 200px;
   left: 0;
   right: 0;
   top: 0;
+  z-index: 0;
+  background-image: url('./assets/HeroBanner/bg-blur.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* ======================================================================= */
 
 /* ======================== Hero Section ================================== */
 .hero-section {
-  height: 100vh;
+  height: 100dvh;
   background-image: url(../src/assets/HeroBanner/filebackground.png);
   background-position: top;
   background-repeat: no-repeat;
@@ -164,23 +194,23 @@
   position: absolute;
   left: -5%;
   width: 10%;
-  bottom: 15%;
+  bottom: 18%;
 }
 .navitag-right {
   position: absolute;
   right: -5%;
   width: 10%;
-  bottom: 15%;
+  bottom: 18%;
 }
 
 .navi-plnt-left {
   position: absolute;
-  bottom: 22%;
+  bottom: 26%;
   left: 7%;
 }
 .navi-plnt-right {
   position: absolute;
-  bottom: 22%;
+  bottom: 26%;
   right: 7%;
 }
 
@@ -190,7 +220,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 3%;
+  bottom: 5%;
   transition: transform 1s ease-in-out;
 }
 .image-container img {
@@ -223,21 +253,23 @@
 
 /* ==================== SECOND SCREEN SECTIONS CSS ==================================== */
 .second-screen-section {
-  height: 100vh;
+  height: 100dvh;
   background-image: url(../src/assets/HeroBanner/secondscreenbg.png);
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
 }
-.till-ship{
+.till-ship {
   background: rgba(64, 123, 255, 0.3);
-
 }
 .till-ship-img {
-  top: -79%;
-  left: -16.7%;
+  left: -14.7%;
+  bottom: 0%;
+}
 
+.till-ship {
+  background-color: rgba(64, 123, 255, 0.3);
 }
 
 .progress-sect-rocket {
@@ -245,7 +277,7 @@
   left: 2%;
 }
 .progress-sect-astronot {
-  top: -99%;
+  bottom: 0%;
   width: 20%;
   left: 2%;
 }
@@ -272,12 +304,12 @@
 }
 .progress-side-hr {
   border: 2px solid rgba(255, 240, 96, 1);
-  height: 59px;
+  height: 35px;
   margin: 0 auto;
 }
-.progress-side-hr11{
+.progress-side-hr11 {
   border: 2px dashed rgba(255, 240, 96, 1);
-  height: 45px;
+  height: 30px;
   margin: 0 auto;
 }
 .progress-side-hr-2 {
@@ -286,8 +318,8 @@
   margin: 0 auto;
 }
 .progress-foot-alen {
-  left: -4.2%;
-  bottom: -1%;
+  left: -4%;
+  bottom: 0%;
 }
 .push-notification-close {
   background-color: rgba(157, 146, 210, 0.15) !important;
@@ -296,6 +328,35 @@
 .second-screen-pathway {
   width: 79% !important;
   transform: translate(12.5%, 0%);
+}
+.second-scrn-bottom {
+  margin-top: 8px !important;
+}
+.second-scrn-padding {
+  padding: auto !important;
+}
+
+// TOOLTIP CSS
+
+.tooltiptext {
+  visibility: auto;
+  background-color: rgba(85, 68, 158, 0.3);
+  color: rgba(255, 240, 96, 1);
+  text-align: center;
+  border: 1px solid rgba(255, 240, 96, 1);
+  bottom: -25%;
+  left: 20%;
+}
+
+.tooltiptext::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -6px;
+  border-width: 7px;
+  border-style: solid;
+  border-color: transparent rgba(255, 240, 96, 1) transparent transparent;
 }
 
 /* ==================== SECOND SCREEN SECTIONS CSS END ==================================== */
@@ -319,6 +380,21 @@
   top: 10%;
   right: 31%;
 }
+.gift-circle-sec {
+  margin-right: 0;
+  transition: margin-right 1s ease; /* 1 second transition */
+}
+.gift-circle-sec:hover {
+  margin-right: 7rem;
+}
+.playearn-circle-sec {
+  margin-left: 0;
+  transition: margin-left 1s ease; /* 1 second transition */
+}
+.playearn-circle-sec:hover {
+  margin-left: 7rem;
+}
+
 .launch-rocket {
   bottom: 18%;
 }
@@ -356,6 +432,18 @@
     rgba(10, 28, 69, 0.8) 100%
   );
 }
+.play-earn-img {
+  left: 50%;
+  transform: translate(-50%, -0%);
+  top: 2%;
+}
+.play-img-eft {
+  width: 0%;
+}
+.play-img-eft-act {
+  transition: width 0.5s ease;
+  width: 20%;
+}
 .pay-earn-content .row {
   background-color: rgba(255, 255, 255, 0.5);
 }
@@ -369,7 +457,199 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   z-index: 10;
 }
+
 /* ==================== PLAY AND EARN SECTIONS CSS END ==================================== */
+/* ==================== OFFER SECTIONS CSS ==================================== */
+.offer-section {
+  background-image: url(../src/assets/offer/offerbg.png);
+  width: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // height: 100vh;
+}
+
+.offer-bg-img-1 {
+  background-image: url(../src/assets/offer/card3bg.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.offer-bg-img-2,
+.offer-bg-img-4 {
+  background-image: url(../src/assets/offer/card2bg.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.offer-bg-img-3 {
+  background-image: url(../src/assets/offer/card1bg.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.offer-cards {
+  border-radius: 24px;
+  height: 307px;
+}
+.offer-slider .slick-slide {
+  padding: 0px 24px 0px 0px !important;
+  box-sizing: border-box;
+}
+.offer-slider .slick-arrow {
+  display: none !important;
+}
+.offer-exc-card {
+  width: 410px !important;
+}
+.offer-exc-rocket {
+  left: 14%;
+  bottom: 45%;
+}
+.price-trolley {
+  border-radius: 70px 20px 20px 20px;
+  background-image: url(../src/assets/offer/exclperk1.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 491px;
+}
+.price-watch {
+  border-radius: 20px;
+  background-image: url(../src/assets/offer/exclperk2.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 233px;
+}
+.price-headphone {
+  border-radius: 20px 20px 70px 20px;
+  background-image: url(../src/assets/offer/exclperk3.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 233px;
+}
+.purple-border-bottom {
+  border-bottom: 1px solid var(--push-notification);
+}
+
+.offer-footer-section {
+  background-image: url(../src/assets/offer/Footer.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 75dvh;
+  z-index: 9;
+  overflow: hidden;
+}
+.footer-semi-planet {
+  background-image: url(../src/assets/offer/semiplanet.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50%;
+  height: 94%;
+  bottom: 0%;
+  z-index: 1;
+  left: 25%;
+}
+
+.price-exclusive {
+  // grid-auto-columns: 1rf 1rf 1rf;
+  grid-template-columns: auto auto auto;
+}
+
+.truncate-text-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.truncate-text-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+/* ==================== OFFER SECTIONS CSS END ==================================== */
+
+/* ==================== MYREWARD SECTIONS CSS ==================================== */
+.myreward-card-1 {
+  background-image: url(../src/assets/MyRewards/starsbg.png);
+  background-position: center;
+  background-size: cover;
+}
+.myreward-card-2 {
+  background-image: url(../src/assets/MyRewards/withoutstarsbg.png);
+  background-position: center;
+  background-size: cover;
+}
+.myreward-star {
+  top: -32%;
+  right: -10%;
+}
+.myreward-pocket {
+  top: -7%;
+  right: 3%;
+}
+.myreward-shotingmeteor {
+  right: 8%;
+  bottom: 24%;
+}
+
+.my-reward-cards {
+  grid-template-columns: auto auto;
+}
+.reward-slider .slick-slide {
+  margin: 0px 10px;
+}
+.reward-moving-rkt {
+  bottom: 4%;
+  left: 2%;
+  width: 8%;
+}
+
+.reward-discount{
+  background-image: url(../src/assets/MyRewards/discountbg.png);
+}
+.discount-border{
+  border-radius: 0px 8px 0px 8px;
+}
+// .excl-discount .slick-track{
+//   display: flex;
+// }
+// .excl-discount .slick-slide{
+// margin: 16px;
+// }
+// .excl-discount .slick-slide{
+// // width: 29vw !important;
+// }
+// .excl-discount-card{
+//   // width: 28vw !important;
+// // margin-right: 2rem !important;
+//   // padding: 0px 30px !important;
+  
+// }
+
+.excl-discount .slick-track {
+  display: flex;
+}
+
+.excl-discount .slick-slide {
+  margin: 0 8px !important; /* Adjust margin if needed */
+}
+
+/* Optional: Make sure the slider container has appropriate width */
+.slider-container {
+  padding: 0 20px !important; /* Keep enough space for partial slides */
+}
+
+/* ==================== MYREWARD SECTIONS CSS END ==================================== */
 
 /* =================== MEDIA QUERY ===============================*/
 
@@ -388,6 +668,18 @@
   .bg-planet-ring {
     top: 50%;
     width: 70%;
+  }
+  .second-scrn-bottom {
+    margin-top: 0px !important;
+  }
+  .second-scrn-padding {
+    padding: 0 !important;
+  }
+  .second-screen-xl {
+    margin-top: 0.5rem !important;
+  }
+  .till-ship-img {
+    left: -16.7% !important;
   }
 }
 
@@ -421,6 +713,25 @@
     position: absolute;
     bottom: 50%;
     left: 20%;
+  }
+}
+
+@media only screen and (min-width: 1600px) and (max-width: 1920px) {
+  .second-screen-xl {
+    margin-top: 4rem !important;
+  }
+}
+@media only screen and (min-width: 1440px) and (max-width: 1440px) {
+  .planet-section {
+    padding-top: 4%;
+  }
+  .footer-responsive {
+    margin-top: 4%;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .planet-section {
+    padding-top: 2%;
   }
 }
 
