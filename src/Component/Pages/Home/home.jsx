@@ -9,12 +9,12 @@ const Home = () => {
     <>
     <section className="hero-section  position-relative" >
       <Navbar />
-      {/* <Herosection /> */}
+      <Herosection />
       <PlanetSlider />
     </section>
      {/* <Invitefriend/> */}
      </>
-    
+
   );
 };
 

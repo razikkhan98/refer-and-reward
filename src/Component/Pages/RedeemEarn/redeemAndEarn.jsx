@@ -6,10 +6,11 @@ import redeembox from '../../../assets/redeemEarn/redembox.svg';
 import leftcloud from '../../../assets/redeemEarn/leftcloud.svg';
 import rocket from '../../../assets/redeemEarn/moverokt.svg';
 import coins from '../../../assets/redeemEarn/coinsclt.svg';
+import SideModal from '../../Common/sideHIWmodal.jsx/sideModal';
 
 const RedeemAndEarn = () => {
   return (
-    <section className="hero-section d-flex justify-content-center align-items-center px-5">
+    <section className="hero-section d-flex justify-content-center align-items-center px-5 position-relative">
       <div className="container">
         <div className="row justify-content-center">
           <div
@@ -105,6 +106,7 @@ const RedeemAndEarn = () => {
           </div>
         </div>
       </div>
+          <SideModal/>
     </section>
   );
 };

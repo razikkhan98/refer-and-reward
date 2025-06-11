@@ -11,8 +11,44 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-#root {
-  overflow-x: hidden;
+// ============= MAIN ANIMATION CSS =========================
+.main-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  // opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s ease-in-out;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.main-animation.active {
+  // opacity: 1;
+  pointer-events: auto;
+  z-index: 2;
+}
+
+// Allow internal scroll for Offer main-animation
+.main-animation:nth-of-type(8).active {
+  overflow-y: auto;
+}
+// ============= MAIN ANIMATION CSS END =====================
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  // overflow: hidden; // hides scroll and disables default scrolling
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
 
 @keyframes logo-spin {
@@ -43,6 +79,7 @@
   --light-white: rgba(250, 250, 250, 1);
   --light-blue: rgba(64, 123, 255, 1);
   --border-light: rgba(255, 255, 255, 0.4);
+  --light-white-bg: rgba(255, 255, 255, 0.15);
   --text-blue-2: rgba(73, 52, 149, 1);
   --dark-pink: rgba(224, 77, 176, 1);
   --push-notification: rgba(157, 146, 210, 1);
@@ -50,7 +87,12 @@
   --text-light-black: rgba(51, 51, 51, 1);
   --light-white: rgba(239, 243, 247, 0.7);
   --light-white-2: rgba(239, 243, 247, 1);
-  --light-cream:rgba(255, 242, 178, 1);
+  --light-cream: rgba(255, 242, 178, 1);
+  --slider-arrow-color: rgba(75, 50, 173, 1);
+  --light-pink: rgba(255, 153, 153, 1);
+  --light-yellow: rgba(255, 240, 96, 1);
+  --register-inp: rgba(92, 75, 161, 0.1);
+  --text-light-gray: rgba(161, 161, 161, 1);
 }
 
 /* ================ font colors ============== */
@@ -71,6 +113,12 @@
 }
 .text-light-black {
   color: var(--text-light-black);
+}
+.text-light-yellow {
+  color: var(--light-yellow);
+}
+.text-light-gray {
+  color: var(--text-light-gray);
 }
 /* ============================================= */
 
@@ -97,7 +145,15 @@
 .background-light-cream {
   background-color: var(--light-cream);
 }
-
+.background-light-pink {
+  background-color: var(--light-pink);
+}
+.background-light-white {
+  background-color: var(--light-white-bg);
+}
+.background-register-input {
+  background-color: var(--register-inp);
+}
 
 /* ============================================= */
 
@@ -129,6 +185,14 @@
 .border-blue {
   border: 1px solid var(--text-blue);
 }
+// =======================================================================
+
+// =============== LETTER SPACING ================================================
+
+.ls-4 {
+  letter-spacing: 4px;
+}
+
 // =======================================================================
 
 /* ===================== Navbar Or Header Css ============================ */
@@ -194,13 +258,13 @@
   position: absolute;
   left: -5%;
   width: 10%;
-  bottom: 18%;
+  bottom: -4em;
 }
 .navitag-right {
   position: absolute;
   right: -5%;
   width: 10%;
-  bottom: 18%;
+  bottom: -4em;
 }
 
 .navi-plnt-left {
@@ -244,7 +308,7 @@
 
 /* =========================================================================== */
 .bg-planet-ring {
-  top: 45%;
+  top: -8rem;
 }
 
 .heigth-85vh {
@@ -413,6 +477,12 @@
 .earn-shadow {
   filter: drop-shadow(10px 0px 10px #493495);
 }
+.howitwork-side-modal{
+  bottom: 15%;
+}
+.howitwork-side-modal .side-text {
+  writing-mode: sideways-lr;
+}
 
 /* ==================== REDEEM AND EARN SECTIONS CSS END ==================================== */
 /* ==================== PLAY AND EARN SECTIONS CSS ==================================== */
@@ -575,8 +645,30 @@
   overflow: hidden;
 }
 
-
 /* ==================== OFFER SECTIONS CSS END ==================================== */
+
+//===================== FOOTER CSS AND ANIMATION CSS -=============================
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer-fade-up {
+  opacity: 0; /* start hidden */
+  animation: fadeUp 1s forwards; /* duration of 1s, keep end state */
+}
+
+.footer-delay-700 {
+  animation-delay: 0.7s;
+}
+//===================== FOOTER CSS AND ANIMATION CSS END -=============================
 
 /* ==================== MYREWARD SECTIONS CSS ==================================== */
 .myreward-card-1 {
@@ -606,50 +698,219 @@
   grid-template-columns: auto auto;
 }
 .reward-slider .slick-slide {
-  margin: 0px 10px;
+  display: flex !important;
+  justify-content: center;
+  // width: auto !important;
 }
+.reward-slider .reward-slides {
+  width: 200px !important;
+}
+
+@keyframes pulseWidth {
+  0%,
+  100% {
+    width: 9%;
+  }
+  50% {
+    width: 7%;
+  }
+}
+
 .reward-moving-rkt {
   bottom: 4%;
   left: 2%;
-  width: 8%;
+  width: 9%;
+  animation: pulseWidth 7s ease-in-out 2s infinite; /* 2s duration, 0.5s delay, infinite loop */
 }
 
-.reward-discount{
+.reward-slider .slick-prev {
+  left: 0.4%;
+  z-index: 2;
+  border: 1px solid var(--slider-arrow-color);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+}
+.reward-slider .slick-prev:hover {
+  left: 0.4%;
+  z-index: 2;
+  border: 1px solid var(--slider-arrow-color);
+  background-color: var(--slider-arrow-color);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+}
+.reward-slider .slick-prev:before {
+  content: url(../src/assets/MyRewards/rwdsldlftarw.svg);
+  position: relative;
+  top: -1px;
+}
+.reward-slider .slick-prev:hover:before {
+  content: url(../src/assets/MyRewards/rwdsldlfthvrarw.svg);
+  position: relative;
+  top: -1px;
+}
+
+.reward-slider .slick-next {
+  right: 0%;
+  z-index: 2;
+  border: 1px solid var(--slider-arrow-color);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+}
+.reward-slider .slick-next:hover {
+  right: 0%;
+  z-index: 2;
+  border: 1px solid var(--slider-arrow-color);
+  background-color: var(--slider-arrow-color);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+}
+.reward-slider .slick-next:before {
+  content: url(../src/assets/MyRewards/rwdsldrgtarw.svg);
+  position: relative;
+  top: -1px;
+}
+.reward-slider .slick-next:hover:before {
+  content: url(../src/assets/MyRewards/rwdsldrgthvrarw.svg);
+  position: relative;
+  top: -1px;
+}
+
+.reward-discount {
   background-image: url(../src/assets/MyRewards/discountbg.png);
 }
-.discount-border{
+.discount-border {
   border-radius: 0px 8px 0px 8px;
 }
-// .excl-discount .slick-track{
+
+// ==================================
+
+.excl-discount-card {
+  width: 360px !important;
+}
+.exclusive-discount-sect .slick-slide {
+  // width: auto !important;
+  display: flex !important;
+  justify-content: start;
+}
+
+.exclusive-discount-sect .slick-list {
+  padding-left: 0px !important;
+}
+.myreward-third-section {
+  // height: 100dvh;
+  background-image: url(../src/assets/MyRewards/reward3bg.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.referred-banner {
+  background-image: url(../src/assets/MyRewards/referralsbg.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+// play and earn card css
+
+// body {
 //   display: flex;
-// }
-// .excl-discount .slick-slide{
-// margin: 16px;
-// }
-// .excl-discount .slick-slide{
-// // width: 29vw !important;
-// }
-// .excl-discount-card{
-//   // width: 28vw !important;
-// // margin-right: 2rem !important;
-//   // padding: 0px 30px !important;
-  
+//   justify-content: center;
 // }
 
-.excl-discount .slick-track {
+.playearn-card {
   display: flex;
+  min-width: 500px;
+  height: 346px;
+  width: 100%;
 }
 
-.excl-discount .slick-slide {
-  margin: 0 8px !important; /* Adjust margin if needed */
+.playearn-content {
+  min-width: 50px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background-position: center;
+  margin: 10px;
+  transition: all 0.7s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+  background-size: cover;
+  background-position: center !important;
+  background-repeat: no-repeat;
+  cursor: grab;
 }
 
-/* Optional: Make sure the slider container has appropriate width */
-.slider-container {
-  padding: 0 20px !important; /* Keep enough space for partial slides */
+.play-earn-card-1 {
+  min-width: 50px;
+}
+.play-earn-card-2 {
+  min-width: 70px;
+}
+.play-earn-card-3 {
+  min-width: 90px;
+}
+.play-earn-card-4 {
+  min-width: 110px;
+}
+// background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+
+.redeem-claim {
+  background: linear-gradient(180deg, #0b1e44 0%, #1a2a6c 50%, #1b4965 100%);
 }
 
 /* ==================== MYREWARD SECTIONS CSS END ==================================== */
+
+/* ==================== REGISTRATION SECTIONS CSS ==================================== */
+.registration-section {
+  height: 100dvh;
+  background-image: url(../src/assets/Registrartion/Registrationbg.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.register-form {
+  background-image: url(../src/assets/Registrartion/formbottom1.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  overflow: hidden;
+}
+/* ==================== REGISTRATION SECTIONS CSS END ==================================== */
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  pointer-events: none;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-down-shrink {
+  animation: fadeDownShrink 0.8s forwards;
+}
+
+@keyframes fadeDownShrink {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100px) scale(0.5);
+    opacity: 0.7;
+  }
+}
+
+.visually-hidden {
+  visibility: hidden;
+  position: absolute;
+}
 
 /* =================== MEDIA QUERY ===============================*/
 
@@ -715,7 +976,6 @@
     left: 20%;
   }
 }
-
 @media only screen and (min-width: 1600px) and (max-width: 1920px) {
   .second-screen-xl {
     margin-top: 4rem !important;
@@ -729,6 +989,19 @@
     margin-top: 4%;
   }
 }
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+  .reward-slider .reward-slides {
+    width: 170px !important;
+  }
+  .excl-discount-card {
+    width: 298px !important;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+  .reward-slider .reward-slides {
+    width: 150px !important;
+  }
+}
 @media only screen and (min-width: 1300px) {
   .planet-section {
     padding-top: 2%;
@@ -736,3 +1009,241 @@
 }
 
 /* =================== MEDIA QUERY END ========================== */
+
+// -===================================
+
+//  testing css
+
+.height-100vh {
+  height: 100vh;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-50px);
+    display: none !important;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-slide-up {
+  animation: slideUp 1s forwards;
+  display: block;
+}
+.nav-slide-down {
+  display: block;
+  animation: slideDown 1s forwards;
+}
+// ---------- middle sect with second screen css
+.middle-sect {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.visible-second-sect {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.hidden-second-sect {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+// ------------------------------------aa
+
+.plnt-animt {
+  // display: block;
+  animation: plntDown 1s forwards;
+}
+
+/* Animation for appearing */
+@keyframes slideUpFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation for disappearing */
+@keyframes slideDownFadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+}
+
+.plnt-animt-up {
+  animation: slideUpFadeIn 0.5s forwards;
+}
+
+.plnt-animt-down {
+  animation: slideDownFadeOut 0.5s forwards;
+}
+
+.plnt-animt-ring-up {
+  animation: slideUpFadeIn 0.5s forwards;
+}
+
+.plnt-animt-ring-down {
+  animation: slideDownFadeOut 0.5s forwards;
+}
+
+// =====================================
+// Plant move top bottom animation
+
+.big-plnt-btm {
+  animation: movePlntToBottomCenter 1s forwards;
+}
+.big-plnt-top {
+  animation: movePlntToTopLeft 1s forwards;
+}
+@keyframes movePlntToTopLeft {
+  0% {
+    right: 0;
+    bottom: 5%;
+    width: 23%;
+    left: 0;
+  }
+  100% {
+    width: 7.1%;
+    right: 28%;
+    bottom: 67.7%;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes movePlntToBottomCenter {
+  0% {
+    width: 8%;
+    right: 27.6%;
+    bottom: 66%;
+    left: 0;
+    visibility: hidden;
+  }
+  100% {
+    right: 0;
+    bottom: 5%;
+    width: 23%;
+    left: 0;
+  }
+}
+// .big-plnt-btm {
+//   animation: movePlntToBottomCenter 1s ease-in-out forwards;
+// }
+// .big-plnt-top {
+//   animation: movePlntToTopLeft 1s ease-in-out forwards;
+// }
+// @keyframes movePlntToTopLeft {
+//   0% {
+//     right: 0;
+//     bottom: 5%;
+//     width: 23%;
+//     left: 0;
+//     opacity: 1; /* Start fully visible */
+//   }
+//   90% {
+//     /* Optional: add a slight easing towards the end */
+//     right: 28%;
+//     bottom: 67.7%;
+//     width: 7.1%;
+//     opacity: 1;
+//   }
+//   100% {
+//     /* Keep the element hidden after the animation if needed */
+//     right: 28%;
+//     bottom: 67.7%;
+//     width: 7.1%;
+//     opacity: 0; /* Fade out smoothly instead of flickering */
+//   }
+// }
+
+// @keyframes movePlntToBottomCenter {
+//   0% {
+//     right: 27.6%;
+//     bottom: 66%;
+//     width: 8%;
+//     opacity: 0;
+//   }
+//   90% {
+//     right: 0;
+//     bottom: 5%;
+//     width: 23%;
+//     opacity: 1;
+//   }
+//   100% {
+//     right: 0;
+//     bottom: 5%;
+//     width: 23%;
+//     opacity: 1;
+//   }
+// }
+
+// --------------/-
+// navbar move animation
+
+@keyframes moveUpFade {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+@keyframes moveDownFade {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

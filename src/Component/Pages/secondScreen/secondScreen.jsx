@@ -110,7 +110,7 @@ const SecondScreen = () => {
   };
 
   return (
-    <section className="second-screen-section position-relative">
+    <section className="second-screen-section position-relative" >
       <div className="container" style={styles.section}>
         <div className="row justify-content-between mt-4">
           <div className="col-lg-3">

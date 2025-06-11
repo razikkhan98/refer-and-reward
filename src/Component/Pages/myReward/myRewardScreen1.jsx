@@ -15,46 +15,22 @@ import moneypocket from '../../../assets/MyRewards/moneypkt.svg';
 import shootingmeteor from '../../../assets/MyRewards/shotmeteor.svg';
 import rewardRocket from '../../../assets/MyRewards/rewardRocket.svg';
 import longArrow from '../../../assets/MyRewards/longArrow.svg';
-import flowPlanet1 from '../../../assets/MyRewards/flowplnt1.svg';
-import moverocket from '../../../assets/MyRewards/moverocket.svg';
-import clouds from '../../../assets/MyRewards/clouds.svg';
 
 const MyRewardFirstScreen = () => {
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    variableWidth: true,
-  };
-  // const discount = {
-  //   dots: false,
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 3,
-  //   slidesToScroll: 1,
-  //   centerMode: true,
-  //   initialSlide: 0,
-  //   centerPadding: '60px',
-  // };
   const discount = {
-  dots: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 2.5, // Show 3.5 slides
-  slidesToScroll: 1,
-  centerMode: true,
-  initialSlide: 2,
-  centerPadding: '150px', // Adjust this to control the partial slide visibility
-};
+    dots: false,
+    arrows: false,
+    slidesToShow: 3,
+    centerMode: true,
+    centerPadding: '60px',
+  };
 
   return (
     <>
       <section className="hero-section  position-relative">
         <Navbar />
         <div className="container">
-          {/* <div className="row justify-content-between px-3">
+          <div className="row justify-content-between px-3">
             <div className="col-lg-3"></div>
             <div className="col-lg-4 d-flex justify-content-end px-0">
               <div className="till-ship w-75 position-relative tilte-shadow rounded-3">
@@ -78,6 +54,7 @@ const MyRewardFirstScreen = () => {
               </div>
             </div>
           </div>
+          {/* MY REWARDS FIRST SCREEN */}
           <div className="d-flex my-reward-cards gap-4 mt-3 px-0">
             <div className="w-50 myreward-card-1 px-4 pb-4 rounded-4">
               <h2 className="font-24 montserrat-bold text-white mb-1 mt-3 pt-3">
@@ -178,123 +155,148 @@ const MyRewardFirstScreen = () => {
                 </button>
               </div>
             </div>
-          </div> */}
+          </div>
+          <div className="myreward-bottom mt-5 text-center">
+            <h2 className="m-0 font-32 space-grotesk-bold text-blue">
+              Your Reward Journey So Far
+            </h2>
+            <img className="offset-3" src={longArrow} alt="longArrow" />
+          </div>
+          <div className="position-absolute bottom-0 start-0">
+            <img className="width-60" src={rewardRocket} alt="footerrocket" />
+          </div>
+          {/* MY REWARDS FIRST SCREEN END*/}
 
-          {/* <div className="d-flex background-text-blue rounded-4 overflow-hidden">
+          {/* MY REWARDS SECOND SCREEN */}
+          {/* <div className="d-flex justify-content-between background-text-blue rounded-4 overflow-hidden position-relative py-3 mt-2">
             <div className="width-12">
-              <h3 className="font-20 montserrat-semibold text-white">
-                Your Reward Journey So Far
-              </h3>
-              <img className="w-50" src={rewardRocket} alt="" />
-            </div>
-            <div>
-              <Slider {...settings}>
-                <div className="background-light-white-2 border-radius-12 text-center pt-2 pb-3 ">
-                  <h4 className="font-14 montserrat-semibold text-blue">
-                    Level 1
-                  </h4>
-                  <img className="width-60" src={flowPlanet1} alt="" />
-                  <h4 className="font-14 montserrat-regular">1000 Meteors</h4>
-                  <button className="background-text-blue border-0 border-radius-8 font-12 px-5 py-2 mx-3 montserrat-semibold text-white">
-                    Claim
-                  </button>
-                </div>
-                <div className="background-light-white-2 border-radius-12 text-center pt-2 pb-3 ">
-                  <h4 className="font-14 montserrat-semibold text-blue">
-                    Level 1
-                  </h4>
-                  <img className="width-60" src={flowPlanet1} alt="" />
-                  <h4 className="font-14 montserrat-regular">1000 Meteors</h4>
-                  <button className="background-text-blue border-0 border-radius-8 font-12 px-5 py-2 mx-3 montserrat-semibold text-white">
-                    Claim
-                  </button>
-                </div>
-                <div className="background-light-white-2 border-radius-12 text-center pt-2 pb-3 ">
-                  <h4 className="font-14 montserrat-semibold text-blue">
-                    Level 1
-                  </h4>
-                  <img className="width-60" src={flowPlanet1} alt="" />
-                  <h4 className="font-14 montserrat-regular">1000 Meteors</h4>
-                  <button className="background-text-blue border-0 border-radius-8 font-12 px-5 py-2 mx-3 montserrat-semibold text-white">
-                    Claim
-                  </button>
-                </div>
-              </Slider>
-            </div>
-          </div> */}
-          {/* <div className="d-flex justify-content-between py-3 pe-4 background-text-blue rounded-4 overflow-hidden position-relative">
-            <div className="width-15">
               <h3 className="font-20 montserrat-semibold text-white ms-3 w-50">
                 Your Reward Journey So Far
               </h3>
-              <img className='position-absolute reward-moving-rkt' src={moverocket} alt="moverocket" />
-              <img className="width-10 position-absolute bottom-0 " src={clouds} alt="clouds" />
+              <img
+                className="position-absolute reward-moving-rkt"
+                src={moverocket}
+                alt="moverocket"
+              />
+              <img
+                className="width-10 position-absolute bottom-0 "
+                src={clouds}
+                alt="clouds"
+              />
             </div>
-            <div className="width-80">
-              <Slider className='reward-slider' {...settings}>
-                {[1,2,3,4]?.map((item)=>
-                <div className="background-light-white-2 border-radius-12 text-center  pt-2 pb-3">
-                  <h4 className="font-14 montserrat-semibold text-blue">
-                    Level 1
-                  </h4>
-                  <img className="width-60 mx-auto" src={flowPlanet1} alt="" />
-                  <h4 className="font-14 montserrat-regular">1000 Meteors</h4>
-                  <button className="background-text-blue border-0 border-radius-8 font-12 px-5 py-2 mx-3 montserrat-semibold text-white">
-                    Claim
-                  </button>
-                </div>
-                 )}
-           
-                
+            <div className="slider-container width-87 pe-2">
+              <Slider className="reward-slider" {...rewardSliderSetting}>
+                {RewardSliderJson?.map((slide) => (
+                  <div className="background-light-white-2 reward-slides border-radius-12 text-center pt-2 pb-3 ">
+                    <h4 className="font-14 montserrat-semibold text-blue">
+                      Level {slide?.num}
+                    </h4>
+                    <div className="position-relative d-flex justify-content-center">
+                      <img
+                        className="width-30 mx-auto position-absolute"
+                        src={slide?.img}
+                        alt="reward image"
+                      />
+                      <img
+                        className="width-40 mx-auto mt-5"
+                        src={plntbase}
+                        alt="reward image"
+                      />
+                    </div>
+
+                    <h4 className="font-14 montserrat-regular">1000 Meteors</h4>
+                    {slide?.lock ? (
+                      <button className="background-text-blue w-75 border-0 border-radius-8 font-12  py-2 mx-3 opacity-25 montserrat-semibold text-white">
+                        <img className="mx-auto" src={lock} alt="" />
+                      </button>
+                    ) : (
+                      <button className="background-text-blue w-75 border-0 border-radius-8 font-12  py-2 mx-3 montserrat-semibold text-white">
+                        <span className="">Claim</span>
+                      </button>
+                    )}
+                  </div>
+                ))}
               </Slider>
             </div>
           </div> */}
 
+          {/* MY REWARDS SECOND SCREEN END */}
+
+          {/* MY REWARDS THIRD SCREEN */}
+          {/* MY REWARDS THIRD SCREEN END */}
+
           {/* Discount and exclusive cards */}
-          <div className="reward-discount border-blue shadow-lg rounded-4 p-4">
-            <h2 className="font-18 space-grotesk-bold text-blue mb-1">
+          {/* <div className="reward-discount border-blue shadow-lg rounded-4 px-3 pt-2 pb-3 mt-3">
+            <h2 className="font-18 space-grotesk-bold text-blue mb-0">
               Discount Codes
             </h2>
-            <p className="font-14 montserrat-medium text-blue">
+            <p className="font-14 montserrat-medium text-blue mb-2">
+              Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+            </p>
+              <div className="slider-container">
+                <Slider className="exclusive-discount-sect" {...discount}>
+                  {[1, 2, 3, 4, 5, 6].map((item, index) => (
+                    <div className="d-flex excl-discount-card p-2 border-radius-8 background-text-blue position-relative overflow-hidden">
+                      <span className="p-4 border-radius-8 bg-white"></span>
+                      <div className="text-white ms-3">
+                        <h2 className="font-14 mb-0 montserrat-medium">
+                          Flat{' '}
+                          <span className="font-16 montserrat-bold">
+                            10% Off
+                          </span>{' '}
+                          on
+                        </h2>
+                        <h2 className="font-14 mb-0 montserrat-medium">
+                          Sales Ninja
+                        </h2>
+                      </div>
+                      <div
+                        className={`position-absolute top-0 end-0 text-blue font-12 montserrat-semibold ${index == 1 ? 'background-light-pink' : 'background-light-cream'} px-3 py-0 discount-border`}
+                      >
+                        {index !== 1 ? '7 d' : 'Expire soon'}
+                      </div>
+                    </div>
+                  ))}
+                </Slider>
+              </div>
+          </div>
+          <div className="reward-discount border-blue shadow-lg rounded-4 px-3 pt-2 pb-3 mt-3">
+            <h2 className="font-18 space-grotesk-bold text-blue mb-0">
+              Exclusive Perks
+            </h2>
+            <p className="font-14 montserrat-medium text-blue mb-2">
               Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
             </p>
             <div className="slider-container">
-              {/* <Slider className=" excl-discount" {...discount}>
-                {[1, 2, 3, 4, 5, 6].map((num) => (
-                <div className="d-flex excl-discount-card p-3 border-radius-8 background-text-blue position-relative  overflow-hidden me-3"> */}
-                <Slider className="excl-discount" {...discount}>
-  {[1, 2, 3, 4, 5, 6].map((num) => (
-    <div className="d-flex excl-discount-card p-3 border-radius-8 background-text-blue position-relative overflow-hidden me-3">
-                    <span className="p-4 border-radius-8 bg-white"></span>
-                    <div className="text-white ms-3 me-5 pe-5">
-                      <h2 className="font-14 mb-0 montserrat-medium">
-                        Flat{' '}
-                        <span className="font-16 montserrat-bold">10% Off</span>{' '}
-                        on
-                      </h2>
-                      <h2 className="font-14 mb-0 montserrat-medium">
-                        Sales Ninja
-                      </h2>
+              <div className="slider-container">
+                <Slider className="exclusive-discount-sect" {...discount}>
+                  {[1, 2, 3, 4, 5, 6].map((item, index) => (
+                    <div className="d-flex excl-discount-card p-2 border-radius-8 background-text-blue position-relative overflow-hidden">
+                      <span className="p-4 border-radius-8 bg-white"></span>
+                      <div className="text-white ms-3">
+                        <h2 className="font-14 mb-0 montserrat-medium">
+                          Flat{' '}
+                          <span className="font-16 montserrat-bold">
+                            10% Off
+                          </span>{' '}
+                          on
+                        </h2>
+                        <h2 className="font-14 mb-0 montserrat-medium">
+                          Sales Ninja
+                        </h2>
+                      </div>
+                      <div
+                        className={`position-absolute top-0 end-0 text-blue font-12 montserrat-semibold ${index == 1 ? 'background-light-pink' : 'background-light-cream'} px-3 py-0 discount-border`}
+                      >
+                        {index !== 1 ? '7 d' : 'Expire soon'}
+                      </div>
                     </div>
-                    <div className="position-absolute top-0 end-0 background-light-cream px-3 py-0 discount-border">
-                      7 d
-                    </div>
-                </div>
-                ))}
-               
-              </Slider>
+                  ))}
+                </Slider>
+              </div>
             </div>
-          </div>
+          </div> */}
         </div>
-        {/* <div className="myreward-bottom mt-5 text-center">
-          <h2 className="m-0 font-32 space-grotesk-bold text-blue">
-            Your Reward Journey So Far
-          </h2>
-          <img className='offset-3' src={longArrow} alt="longArrow" />
-        </div>
-        <div className="position-absolute bottom-0 start-0">
-          <img className='width-60' src={rewardRocket} alt="footerrocket" />
-        </div> */}
       </section>
     </>
   );

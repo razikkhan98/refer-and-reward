@@ -336,7 +336,7 @@ const Offer = () => {
         <div
           className="position-absolute footer-semi-planet"
           data-aos="fade-up"
-          data-aos-delay="200"
+          data-aos-delay="100"
         ></div>
       </div>
     </section>
