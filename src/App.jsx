@@ -37,9 +37,9 @@ function App() {
       {/* <Invitefriend /> */}
      {/* <Howitworksfirst /> */}
       {/* <Howitworks /> */}
-      <RedeemAndEarn />
-      {/* <PlayEarn /> */}
-     
+      {/* <RedeemAndEarn />
+      <PlayEarn />
+      */}
 
 
       {/* <Offer /> */}
@@ -52,7 +52,7 @@ function App() {
        */}
       {/* <Registration/> */}
 
-      {/* <Test/> */}
+      <Test/>
     </>
   );
 }
