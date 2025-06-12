@@ -80,7 +80,8 @@ import Invitefriend from './Component/Common/Invitefriend/invitefriend';
 import Offer from './Component/Pages/Offers/offer';
 import Howitworks from './Component/Common/Howitworks/howitworks';
 import Test from './Component/Common/test';
-
+import MyReferralScreen1 from './Component/Pages/MyReferral/myReferralScreen1';
+import MyReferralScreen2 from './Component/Pages/MyReferral/MyReferralScreen2';
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -98,10 +99,10 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (activeIndex === 3) {
+    if (activeIndex === 2) {
       setExitAnimation(false);
       setTimeout(() => AOS.refreshHard(), 100);
-    } else if (activeIndex > 3) {
+    } else if (activeIndex > 2) {
       setExitAnimation(true);
     }
   }, [activeIndex]);
@@ -116,7 +117,7 @@ function App() {
     (e) => {
       if (transitioning) return;
 
-      if (activeIndex === 6 && offerRef.current) {
+      if (activeIndex === 5 && offerRef.current) {
         const el = offerRef.current;
         const { scrollTop, scrollHeight, clientHeight } = el;
 
@@ -129,8 +130,7 @@ function App() {
       }
 
       let newIndex = activeIndex;
-
-      if (e.deltaY > 0 && activeIndex < 6) {
+      if (e.deltaY > 0 && activeIndex < 5) {
         newIndex = activeIndex + 1;
       } else if (e.deltaY < 0 && activeIndex > 0) {
         newIndex = activeIndex - 1;
@@ -163,7 +163,7 @@ function App() {
         Offer,
       ].map((Component, index) => {
         const isActive = index === activeIndex;
-        const isOfferSection = index === 6; // Offer section index
+        const isOfferSection = index === 5; // Offer section index
 
         return (
           <div
@@ -174,8 +174,8 @@ function App() {
               overflowY: isOfferSection && isActive ? 'auto' : 'hidden',
             }}
           >
-            {index === 3 ? (
-              <Howitworks data-aos= "zoom-in-up"
+            {index === 2 ? (
+              <Howitworks   
                 isActive={isActive && !exitAnimation}
                 isExiting={exitAnimation}
               />
@@ -184,6 +184,7 @@ function App() {
                 <Component />
               </div>
             )}
+            
           </div>
         );
       })}

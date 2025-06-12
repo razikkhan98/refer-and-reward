@@ -54,7 +54,7 @@ useEffect(() => {
     setRobotClicked(false);
     setShowSteps(false);
     setStep(0);
-    setTimeout(() => AOS.refreshHard(), 100);
+    setTimeout(() => AOS.refreshHard(), 10);
   }
 }, [isActive, isExiting]);
 
