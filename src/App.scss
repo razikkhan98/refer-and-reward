@@ -505,7 +505,7 @@ body::-webkit-scrollbar {
 .earn-shadow {
   filter: drop-shadow(10px 0px 10px #493495);
 }
-.howitwork-side-modal{
+.howitwork-side-modal {
   bottom: 15%;
 }
 .howitwork-side-modal .side-text {
@@ -1273,5 +1273,85 @@ body::-webkit-scrollbar {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+// -------------------------------------------------------------------------
+//  Invite Friend Css
+
+/* Background image with transition */
+.invite-bg-image {
+  background-image: url(../src/assets/HeroBanner/filebackground.png);
+  background-size: cover;
+  background-position: top;
+  height: 150vh;
+}
+
+/* Fade down for middle section */
+.form-fade-down {
+  opacity: 0;
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+/* Slide down for footer section */
+.astro-slide-down {
+  opacity: 0;
+  transform: translateY(100px);
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+.asto-transition-all {
+  transition: all 1s ease;
+}
+.nav-slide-top {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition:
+    opacity 5s ease,
+    transform 5s ease;
+  visibility: hidden;
+}
+.asto-transition-all {
+  transition: all 1s ease;
+}
+.scrHghRed {
+  animation: scrHghRed 4s forwards;
+}
+.scrHghInc {
+  animation: scrHghInc 4s forwards;
+}
+@keyframes scrHghRed {
+  from {
+    height: 100vh;
+  }
+  to {
+    height: 0vh;
+  }
+}
+@keyframes scrHghInc {
+  from {
+    height: 100vh;
+  }
+  to {
+    height: 100vh;
+  }
+}
+
+.zoom-in-up {
+  animation: zoomInUp 4s ease both;
+}
+ 
+@keyframes zoomInUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.2) translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
   }
 }
