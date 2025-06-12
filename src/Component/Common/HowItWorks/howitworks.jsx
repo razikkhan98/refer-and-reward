@@ -16,47 +16,42 @@ const Howitworks = ({ isActive, isExiting }) => {
   const [showSteps, setShowSteps] = useState(false);
   const [showExit, setShowExit] = useState(false);
 
-  // Initialize AOS once
+  // AOS init
   useEffect(() => {
     AOS.init({ once: true });
   }, []);
 
-  // Steps animation logic
-  useEffect(() => {
-    if (showSteps) {
-      const timeouts = [
-        setTimeout(() => setStep(1), 3000),
-        setTimeout(() => setStep(2), 4000),
-        setTimeout(() => setStep(3), 5000),
-        setTimeout(() => setStep(4), 6000),
-        setTimeout(() => setStep(5), 7000),
-        setTimeout(() => setStep(6), 8000),
-      ];
-      return () => timeouts.forEach(clearTimeout);
-    }
-  }, [showSteps]);
+  // Animation step logic with interval
+ useEffect(() => {
+  if (showSteps) {
+    const interval = setInterval(() => {
+      setStep(prev => {
+        if (prev < 6) {
+          return prev + 1;
+        } else {
+          clearInterval(interval);
+          return prev;
+        }
+      });
+    }, 1000);
 
-  // Exit animation and AOS refresh on active/exiting changes
+    return () => clearInterval(interval);
+  }
+}, [showSteps]);
+
+
+  // Handle active/exiting transitions
   useEffect(() => {
     if (isExiting) {
       setShowExit(true);
     } else if (isActive) {
       setShowExit(false);
+      setRobotClicked(false);
+      setShowSteps(false);
+      setStep(0);
       setTimeout(() => AOS.refreshHard(), 100);
     }
   }, [isActive, isExiting]);
-useEffect(() => {
-  if (isExiting) {
-    setShowExit(true);
-  } else if (isActive) {
-    // Reset all animation states when user scrolls back up
-    setShowExit(false);
-    setRobotClicked(false);
-    setShowSteps(false);
-    setStep(0);
-    setTimeout(() => AOS.refreshHard(), 10);
-  }
-}, [isActive, isExiting]);
 
   const handleRobotClick = () => {
     setRobotClicked(true);
@@ -66,14 +61,11 @@ useEffect(() => {
   };
 
   return (
-    
     <section
-      ref={sectionRef}
-      data-aos= "zoom-in-up"
+  ref={sectionRef}
+  className={`section-howitworks text-center ${showExit ? 'zoom-down-out' : ''} ${isActive ? 'aos-animate zoom-in-up-custom' : ''}`}
+>
 
-      className={`section-howitworks text-center ${showExit ? 'zoom-down-out' : ''}`}
-      // {...(!showExit ? { 'data-aos': 'zoom-in-up' } : {})}
-    >
       <div className="container position-relative h-100">
         <h2 className="space-grotesk-bold font-40 text-black-heading mb-5">
           How It Works
@@ -91,7 +83,6 @@ useEffect(() => {
         {showSteps && (
           <div className="howitwork-second" data-aos="zoom-in-up">
             <img src={Rocketgif} alt="Rocket" className="rocket-gif mb-4" />
-
             <div className="row text-center position-relative inner-row-index">
               <div className={`col-4 howitworks-step ${step >= 1 ? 'visible' : ''}`}>
                 <h6 className="montserrat-bold font-20 mb-22">Launch Your Cosmic Journey</h6>

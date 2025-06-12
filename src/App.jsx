@@ -140,8 +140,8 @@ function App() {
         setTransitioning(true);
         setTimeout(() => {
           setActiveIndex(newIndex);
-          setTimeout(() => setTransitioning(false), 1000);
-        }, 100);
+          setTimeout(() => setTransitioning(false), 1500);
+        }, 300);
       }
     },
     [activeIndex, transitioning],
@@ -177,10 +177,12 @@ function App() {
             }}
           >
             {index === 2 ? (
-              <Howitworks   
-                isActive={isActive && !exitAnimation}
-                isExiting={exitAnimation}
-              />
+              <div data-aos="zoom-in-up">
+    <Howitworks   
+      isActive={isActive && !exitAnimation}
+      isExiting={exitAnimation}
+    />
+  </div>
             ) : (
              <div data-aos="fade-up">
                 <Component />
