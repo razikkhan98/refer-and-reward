@@ -161,6 +161,8 @@ function App() {
         RedeemAndEarn,
         PlayEarn,
         Offer,
+        // MyReferralScreen1,
+        // MyReferralScreen2,
       ].map((Component, index) => {
         const isActive = index === activeIndex;
         const isOfferSection = index === 5; // Offer section index
@@ -180,7 +182,7 @@ function App() {
                 isExiting={exitAnimation}
               />
             ) : (
-              <div data-aos="fade-up">
+             <div data-aos="fade-up">
                 <Component />
               </div>
             )}

@@ -1281,7 +1281,7 @@ body::-webkit-scrollbar {
 
 /* Background image with transition */
 .invite-bg-image {
-  background-image: url(../src/assets/HeroBanner/filebackground.png);
+  background-image: url(../src/assets/HeroBanner/filebackground.png)!important;
   background-size: cover;
   background-position: top;
   height: 150vh;
