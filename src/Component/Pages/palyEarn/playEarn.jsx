@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import spinwheel from '../../../assets/playEarn/spinwheel.svg';
+import SideModal from '../../Common/sideHIWmodal.jsx/sideModal';
 
 const PlayEarn = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -13,11 +14,12 @@ const PlayEarn = () => {
   };
 
   return (
-    <section className="pay-earn-section">
-      <div className="pay-earn-content"
-      data-aos="zoom-in-up"
-       data-aos-delay="300"
-      data-aos-duration="600"
+    <section className="pay-earn-section position-relative">
+      <div
+        className="pay-earn-content"
+        data-aos="zoom-in-up"
+        data-aos-delay="300"
+        data-aos-duration="600"
       >
         <div className="container h-100 pb-5">
           <div className="h-100 d-flex align-items-end position-relative">
@@ -26,10 +28,11 @@ const PlayEarn = () => {
               src={spinwheel}
               alt="spinwheel"
             />
-            <div className="row justify-content-between p-4 rounded-4"
-            data-aos="fade-up"
-            data-aos-duration="600"
-            data-aos-delay="500"
+            <div
+              className="row justify-content-between p-4 rounded-4"
+              data-aos="fade-up"
+              data-aos-duration="600"
+              data-aos-delay="500"
             >
               {/* First Play & Win section */}
               <div className="col-lg-2 text-center ms-3 my-3">
@@ -95,6 +98,7 @@ const PlayEarn = () => {
           </div>
         </div>
       </div>
+      <SideModal/>
     </section>
   );
 };
