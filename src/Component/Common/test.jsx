@@ -569,7 +569,7 @@ const Test = () => {
                                         src={images[prevIndex]}
                                         alt="left-planet"
                                     />
-                                    <span className="font-24 space-grotesk-medium text-dark-blue navi-plnt-left">
+                                    <span className={`font-24 space-grotesk-medium text-dark-blue navi-plnt-left ${isVisible ? 'plnt-animt-up' : 'plnt-animt-down'}`}>
                                         Planet {['A', 'B', 'C', 'D'][prevIndex]}
                                     </span>
                                 </div>
@@ -601,7 +601,7 @@ const Test = () => {
                                         src={images[nextIndex]}
                                         alt="right-planet"
                                     />
-                                    <span className="font-24 space-grotesk-medium text-dark-blue navi-plnt-right">
+                                    <span className={`font-24 space-grotesk-medium text-dark-blue navi-plnt-right ${isVisible ? 'plnt-animt-up' : 'plnt-animt-down'}`}>
                                         Planet {['A', 'B', 'C', 'D'][nextIndex]}
                                     </span>
                                 </div>
