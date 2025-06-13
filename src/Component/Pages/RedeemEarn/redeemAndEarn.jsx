@@ -24,6 +24,7 @@ const RedeemAndEarn = () => {
               className="redeem-circle-sect position-absolute"
               data-aos="fade-left"
               data-aos-offset="600"
+              data-aos-delay="300"
               data-aos-easing="ease-in-sine"
             >
               <div className="redeem-circle gift-circle-sec redeem-shadow position-relative d-flex justify-content-center align-items-center">
@@ -68,6 +69,7 @@ const RedeemAndEarn = () => {
               className="earnmore-circle-sect  position-absolute"
               data-aos="fade-right"
               data-aos-offset="300"
+              data-aos-delay="300"
               data-aos-easing="ease-in-sine"
             >
               <div className="redeem-circle playearn-circle-sec earn-shadow position-relative d-flex justify-content-center align-items-center">
@@ -106,7 +108,7 @@ const RedeemAndEarn = () => {
           </div>
         </div>
       </div>
-          <SideModal/>
+      <SideModal />
     </section>
   );
 };
