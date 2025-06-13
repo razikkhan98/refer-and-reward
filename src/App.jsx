@@ -31,18 +31,18 @@ function App() {
   }, []);
   return (
     <>
-       
-       {/* <Home /> */}
-      {/* <SecondScreen /> */}
-      {/* <Invitefriend /> */}
-     {/* <Howitworksfirst /> */}
-      {/* <Howitworks /> */}
-      {/* <RedeemAndEarn />
-      <PlayEarn />
-      */}
+{/*        
+       <Home />
+      <SecondScreen />
+      <Invitefriend />
+     <Howitworksfirst />
+      <Howitworks />
+      <RedeemAndEarn />
+      <PlayEarn /> */}
+     
 
 
-      {/* <Offer /> */}
+      <Offer />
       {/* <MyRewardFirstScreen/>
      <MyRewardSecondScreen />
      <MyRewardThirdScreen /> */}

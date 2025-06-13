@@ -18,7 +18,7 @@ const PlayEarn = () => {
       <div
         className="pay-earn-content"
         data-aos="zoom-in-up"
-        data-aos-delay="300"
+        data-aos-delay="800"
         data-aos-duration="600"
       >
         <div className="container h-100 pb-5">
