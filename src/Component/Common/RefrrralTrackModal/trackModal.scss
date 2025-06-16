@@ -1,0 +1,128 @@
+.referral-modal-close-btn {
+    background-color: #FFFFFF33;
+    width: 40px;
+    height: 40px;
+}
+
+.btn-close {
+    font-size: 16px;
+}
+
+
+
+
+//  .custom-modal-content {
+//      border-radius: 24px !important;
+//      border: none !important;
+//      background: linear-gradient(to bottom, #421ca6, #a8e8f1);
+//      color: #000;
+//      position: relative;
+//  }
+
+//  .modal-body-custom {
+//      padding: 2rem;
+//  }
+
+//  .astronaut-img {
+//      width: 232px;
+//      height: 254px;
+//      margin-top: -130px;
+//  }
+
+//  .progress-section {
+//      display: flex;
+//      flex-direction: column;
+//      gap: 1.5rem;
+//      margin-top: 1.5rem;
+//  }
+
+//  .step {
+//      display: flex;
+//      align-items: flex-start;
+//      gap: 1rem;
+//  }
+
+//  .circle {
+//      width: 20px;
+//      height: 20px;
+//      border-radius: 50%;
+//      margin-top: 4px;
+//      flex-shrink: 0;
+//  }
+
+//  .filled-circle {
+//      background-color: #1e3a8a;
+//  }
+
+//  .empty-circle {
+//      background-color: #d1d5db;
+//  }
+
+//  .step-content h6 {
+//      font-size: 15px;
+//  }
+
+//  .step-content p {
+//      font-size: 13px;
+//  }
+
+.custom-modal-content {
+    width: 603px !important;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, #421ca6, #a8e8f1);
+    color: #000;
+    position: relative;
+
+    .modal-body-custom {
+        padding: 2rem;
+
+        .astronaut-img {
+            width: 232px;
+            height: 254px;
+            margin-top: -130px;
+        }
+
+        .progress-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+
+            .step {
+                display: flex;
+                align-items: flex-start;
+                gap: 1rem;
+
+                .circle {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    margin-top: 4px;
+                    flex-shrink: 0;
+
+                    &.filled-circle {
+                        background-color: #1e3a8a; // dark blue
+                    }
+
+                    &.empty-circle {
+                        background-color: #d1d5db; // light gray
+                    }
+                }
+
+                .step-content {
+                    h6 {
+                        font-size: 15px;
+                    }
+
+                    p {
+                        font-size: 13px;
+
+                        &.text-muted {
+                            color: #6c757d; // bootstrap text-muted
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
