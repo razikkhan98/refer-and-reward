@@ -15,8 +15,8 @@
 // import PlayEarn from './Component/Pages/palyEarn/playEarn';
 // import Invitefriend from './Component/Common/Invitefriend/invitefriend';
 // import Offer from './Component/Pages/Offers/offer';
-// import Howitworksfirst from './Component/Common/HowItWorks/howitworkfirst';
-// import Howitworks from './Component/Common/HowItWorks/howitworks';
+// // import Howitworksfirst from './Component/Common/HowItWorks/howitworkfirst';
+// // import Howitworks from './Component/Common/HowItWorks/howitworks';
 // import MyRewardFirstScreen from './Component/Pages/myReward/myRewardScreen1';
 // import MyRewardSecondScreen from './Component/Pages/myReward/myRewardScreen2';
 // import MyRewardThirdScreen from './Component/Pages/myReward/myRewardScreen3';
@@ -31,7 +31,7 @@
 //   }, []);
 //   return (
 //     <>
-       
+
 //        {/* <Home /> */}
 //       {/* <SecondScreen /> */}
 //       {/* <Invitefriend /> */}
@@ -39,8 +39,6 @@
 //       {/* <Howitworks /> */}
 //       {/* <RedeemAndEarn /> */}
 //       {/* <PlayEarn /> */}
-     
-
 
 //       {/* <Offer /> */}
 //       {/* <MyRewardFirstScreen/>
@@ -53,12 +51,12 @@
 //       {/* <Registration/> */}
 
 //       {/* <Test/> */}
+//       <Offer/>
 //     </>
 //   );
 // }
 
 // export default App;
-
 
 // ==================================================================
 
@@ -107,11 +105,11 @@ function App() {
     }
   }, [activeIndex]);
 
- useEffect(() => {
-  setTimeout(() => {
-    AOS.refreshHard(); // ensures animations reset even if DOM changed
-  }, 1000);
-}, [activeIndex]);
+  useEffect(() => {
+    setTimeout(() => {
+      AOS.refreshHard(); // ensures animations reset even if DOM changed
+    }, 1000);
+  }, [activeIndex]);
 
   const handleWheel = useCallback(
     (e) => {
@@ -178,17 +176,16 @@ function App() {
           >
             {index === 2 ? (
               <div data-aos="zoom-in-up">
-    <Howitworks   
-      isActive={isActive && !exitAnimation}
-      isExiting={exitAnimation}
-    />
-  </div>
+                <Howitworks
+                  isActive={isActive && !exitAnimation}
+                  isExiting={exitAnimation}
+                />
+              </div>
             ) : (
-             <div data-aos="fade-up">
-                <Component />
+              <div data-aos="fade-up">
+                <Component ActiveAnimt={activeIndex === 1 ? true : false} />
               </div>
             )}
-            
           </div>
         );
       })}

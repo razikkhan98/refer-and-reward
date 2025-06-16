@@ -42,12 +42,12 @@ const Navbar = () => {
                 {navItems?.map((i, index) => {
                   return !i?.img ? (
                     <li
-                      className={`list-unstyled list-background h-100 text-white mt-4 pt-3`}
+                      className={`list-unstyled list-background h-100 text-white mt-4 pt-3 `}
                     >
                       <span
                         data-active-color="orange"
                         ref={(el) => (navRefs.current[index] = el)}
-                        className={`nav-link mx-3 ${
+                        className={`nav-link mx-3 cursor-pointer ${
                           activeIndex === index
                             ? 'active space-grotesk-bold'
                             : 'space-grotesk-medium'

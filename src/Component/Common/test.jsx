@@ -239,9 +239,9 @@ const Test = () => {
                                 }}
                                 onAnimationEnd={SecScrAnimt ? handleAnimationEnd : undefined}
                             >
-                                <div className="col-lg-3">
+                                <div className="col-lg-3 w-auto">
                                     <span
-                                        className=" text-white d-flex font-size-14 montserrat-medium"
+                                        className=" text-white d-flex font-size-14 montserrat-medium cursor-pointer"
                                         onClick={toggleAnimtElements}
                                     >
                                         <img className="me-1" src={leftarrow} alt="leftarrow" />{' '}
@@ -373,7 +373,7 @@ const Test = () => {
                                         </div>
                                     </div>
                                     <div
-                                        className="d-flex justify-content-evenly background-text-blue rounded-2 position-relative py-2 left-box"
+                                        className="d-flex justify-content-evenly background-text-blue rounded-2 position-relative py-2 left-box z-2 cursor-pointer"
                                         // style={styles.box1}
                                         ref={leftBoxRef}
                                         id="leftBox"
@@ -383,13 +383,13 @@ const Test = () => {
                                             src={rocket}
                                             alt="rocket"
                                         />
-                                        <span className="text-white font-14 montserrat-semibold offset-2">
+                                        <span className="text-white font-14 montserrat-semibold offset-2 cursor-pointer">
                                             Play & Earn
                                         </span>
-                                        <img src={longarrow} alt="longarrow" />
+                                        <img className='cursor-pointer' src={longarrow} alt="longarrow" />
                                     </div>
                                     <div
-                                        className="d-flex justify-content-evenly background-dark-pink mt-0 rounded-2 position-relative py-2 left-box"
+                                        className="d-flex justify-content-evenly background-dark-pink mt-0 rounded-2 position-relative py-2 left-box z-2 cursor-pointer"
                                         // style={styles.box1}
                                         ref={leftBoxRef}
                                         id="leftBox"
@@ -399,10 +399,10 @@ const Test = () => {
                                             src={astronot}
                                             alt="astronot"
                                         />
-                                        <span className="text-white font-14 montserrat-semibold offset-2 ">
+                                        <span className="text-white font-14 montserrat-semibold offset-2 cursor-pointer">
                                             Invite & Earn
                                         </span>
-                                        <img src={longarrow} alt="longarrow" />
+                                        <img className='cursor-pointer' src={longarrow} alt="longarrow" />
                                     </div>
                                 </div>
                                 <div className="col-lg-9 planet-section">
@@ -511,7 +511,7 @@ const Test = () => {
                                                     <div className="modal-header border-0">
                                                         <button
                                                             type="button"
-                                                            className="btn-close bg-light p-1 font-8 mb-2 rounded-circle"
+                                                            className="btn-close bg-light p-1 font-8 mb-2 rounded-circle z-2 cursor-pointer"
                                                             onClick={handleClose}
                                                             aria-label="Close"
                                                         ></button>
@@ -529,7 +529,7 @@ const Test = () => {
                                                         </span>
                                                         <button
                                                             type="button"
-                                                            className="btn btn-light rounded-3 me-3 font-16 montserrat-semibold"
+                                                            className="btn btn-light rounded-3 me-3 font-16 montserrat-semibold z-2 cursor-pointer"
                                                         >
                                                             View
                                                         </button>
@@ -564,7 +564,7 @@ const Test = () => {
                                     className={` text-start`}
                                 >
                                     <img
-                                        className={`navitag-left planet-shadow-${prevIndex === 0 ? 'purple' : prevIndex === 1 ? 'yellow' : prevIndex === 2 ? 'green' : 'blue'} ${isVisible ? 'plnt-animt-up' : 'plnt-animt-down'}`}
+                                        className={`navitag-left cursor-pointer planet-shadow-${prevIndex === 0 ? 'purple' : prevIndex === 1 ? 'yellow' : prevIndex === 2 ? 'green' : 'blue'} ${isVisible ? 'plnt-animt-up' : 'plnt-animt-down'}`}
                                         onClick={() => rotate('left')}
                                         src={images[prevIndex]}
                                         alt="left-planet"
@@ -586,7 +586,7 @@ const Test = () => {
                                             src={images[currentIndex]}
                                             alt="center-planet"
                                             onClick={toggleAnimtElements}
-                                            className={`img-fluid rounded-circle planet-shadow-${currentIndex === 0 ? 'purple' : currentIndex === 1 ? 'yellow' : currentIndex === 2 ? 'green' : 'blue'} ${isAnimating ? 'fade-down-shrink' : ''
+                                            className={`img-fluid cursor-pointer rounded-circle planet-shadow-${currentIndex === 0 ? 'purple' : currentIndex === 1 ? 'yellow' : currentIndex === 2 ? 'green' : 'blue'} ${isAnimating ? 'fade-down-shrink' : ''
                                                 }`}
                                         />
                                     </div>
@@ -596,7 +596,7 @@ const Test = () => {
                                     className={` text-end`}
                                 >
                                     <img
-                                        className={`navitag-right planet-shadow-${nextIndex === 0 ? 'purple' : nextIndex === 1 ? 'yellow' : nextIndex === 2 ? 'green' : 'blue'} ${isVisible ? 'plnt-animt-up' : 'plnt-animt-down'}`}
+                                        className={`navitag-right cursor-pointer planet-shadow-${nextIndex === 0 ? 'purple' : nextIndex === 1 ? 'yellow' : nextIndex === 2 ? 'green' : 'blue'} ${isVisible ? 'plnt-animt-up' : 'plnt-animt-down'}`}
                                         onClick={() => rotate('right')}
                                         src={images[nextIndex]}
                                         alt="right-planet"

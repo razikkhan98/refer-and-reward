@@ -209,6 +209,9 @@ body::-webkit-scrollbar {
 }
 /* ============================================ */
 
+.cursor-pointer{
+  cursor: pointer;
+}
 // =============== BORDER ================================================
 .border-blue {
   border: 1px solid var(--text-blue);
@@ -558,14 +561,33 @@ body::-webkit-scrollbar {
 
 /* ==================== PLAY AND EARN SECTIONS CSS END ==================================== */
 /* ==================== OFFER SECTIONS CSS ==================================== */
+
+
+
+/* Background fixed full-page */
 .offer-section {
-  background-image: url(../src/assets/offer/offerbg.png);
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 200dvh; /* Full viewport height */
+  background-image: url('../src/assets/offer/offerbg.png');
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  // height: 100vh;
+  z-index: 1;
+  display: flex; /* Optional: if you want to control layout */
+  flex-direction: column; /* Optional: if needed */
 }
+
+/* Scrollable content inside offer-section */
+.offer-sect-content {
+  position: relative;
+  z-index: 2;
+  height: 310dvh; /* Fill the parent height */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
 
 .offer-bg-img-1 {
   background-image: url(../src/assets/offer/card3bg.png);
@@ -1284,7 +1306,7 @@ body::-webkit-scrollbar {
   background-image: url(../src/assets/HeroBanner/filebackground.png)!important;
   background-size: cover;
   background-position: top;
-  height: 150vh;
+  height: 100vh;
 }
 
 /* Fade down for middle section */
@@ -1298,7 +1320,7 @@ body::-webkit-scrollbar {
 /* Slide down for footer section */
 .astro-slide-down {
   opacity: 0;
-  transform: translateY(100px);
+  transform: translateY(10px);
   transition:
     opacity 1s ease,
     transform 1s ease;
@@ -1309,7 +1331,7 @@ body::-webkit-scrollbar {
 }
 .nav-slide-top {
   opacity: 0;
-  transform: translateY(-100px);
+  transform: translateY(-10px);
   transition:
     opacity 5s ease,
     transform 5s ease;
@@ -1329,7 +1351,7 @@ body::-webkit-scrollbar {
     height: 100vh;
   }
   to {
-    height: 0vh;
+    height: 100vh;
   }
 }
 @keyframes scrHghInc {
@@ -1342,7 +1364,7 @@ body::-webkit-scrollbar {
 }
 
 .zoom-in-up {
-  animation: zoomInUp 4s ease both;
+  animation: zoomInUp 8s ease both;
 }
  
 @keyframes zoomInUp {
@@ -1355,3 +1377,4 @@ body::-webkit-scrollbar {
     transform: scale(1) translateY(0);
   }
 }
+
