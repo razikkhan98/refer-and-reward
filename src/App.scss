@@ -20,12 +20,14 @@
   height: 100vh;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.8s ease-in-out;
+  transition: opacity 1s ease-in-out;
   z-index: 1;
   overflow: hidden;
-  &:nth-child(4){
+  &:nth-child(1){
     // opacity: 1;
     // z-index: 9;
+  // transition:none;
+
   }
 }
 
@@ -40,29 +42,6 @@
   overflow-y: auto;
 }
 
-.main-animation {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  // opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.8s ease-in-out;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.main-animation.active {
-  // opacity: 1;
-  pointer-events: auto;
-  z-index: 2;
-}
-
-// Allow internal scroll for Offer main-animation
-.main-animation:nth-of-type(8).active {
-  overflow-y: auto;
-}
 // ============= MAIN ANIMATION CSS END =====================
 
 html,
@@ -73,6 +52,10 @@ body {
   // overflow: hidden; // hides scroll and disables default scrolling
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none; /* Firefox */
+  // background-image: url(../src/assets/HeroBanner/filebackground.png);
+  // background-position: top;
+  // background-repeat: no-repeat;
+  // background-size: cover;
 }
 
 body::-webkit-scrollbar {
@@ -564,7 +547,7 @@ body::-webkit-scrollbar {
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  // height: 100vh;
+  height: 100vh;
 }
 
 .offer-bg-img-1 {
@@ -949,6 +932,12 @@ body::-webkit-scrollbar {
   #banner-sec-heading-mob {
     display: flex;
   }
+  .login-img img {
+    max-width: 459px;
+    max-height: 272px;
+    width: 100%;
+    height: auto;
+  }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1535px) {
   .image-container {
@@ -1181,57 +1170,6 @@ body::-webkit-scrollbar {
     left: 0;
   }
 }
-// .big-plnt-btm {
-//   animation: movePlntToBottomCenter 1s ease-in-out forwards;
-// }
-// .big-plnt-top {
-//   animation: movePlntToTopLeft 1s ease-in-out forwards;
-// }
-// @keyframes movePlntToTopLeft {
-//   0% {
-//     right: 0;
-//     bottom: 5%;
-//     width: 23%;
-//     left: 0;
-//     opacity: 1; /* Start fully visible */
-//   }
-//   90% {
-//     /* Optional: add a slight easing towards the end */
-//     right: 28%;
-//     bottom: 67.7%;
-//     width: 7.1%;
-//     opacity: 1;
-//   }
-//   100% {
-//     /* Keep the element hidden after the animation if needed */
-//     right: 28%;
-//     bottom: 67.7%;
-//     width: 7.1%;
-//     opacity: 0; /* Fade out smoothly instead of flickering */
-//   }
-// }
-
-// @keyframes movePlntToBottomCenter {
-//   0% {
-//     right: 27.6%;
-//     bottom: 66%;
-//     width: 8%;
-//     opacity: 0;
-//   }
-//   90% {
-//     right: 0;
-//     bottom: 5%;
-//     width: 23%;
-//     opacity: 1;
-//   }
-//   100% {
-//     right: 0;
-//     bottom: 5%;
-//     width: 23%;
-//     opacity: 1;
-//   }
-// }
-
 // --------------/-
 // navbar move animation
 
@@ -1315,6 +1253,9 @@ body::-webkit-scrollbar {
     transform 5s ease;
   visibility: hidden;
 }
+.left-0{
+  left:0px;
+}
 .asto-transition-all {
   transition: all 1s ease;
 }
@@ -1354,4 +1295,310 @@ body::-webkit-scrollbar {
     opacity: 1;
     transform: scale(1) translateY(0);
   }
+}
+// =============== Login Css Start =======================
+.login-bg-img {
+  background: url(./assets/Registrartion//Registrationbg.png);
+  // background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.login-img img {
+  height: 272px;
+  width: 459px;
+  display: block;
+}
+
+//   .login-img img {
+//   max-width: 459px;
+//   max-height: 272px;
+//   width: 100%;
+//   height: auto;
+//    display: block;
+// }
+
+.login-form-section {
+  border-radius: 16px;
+  background-color: rgba(239, 243, 247, 1);
+}
+
+.form-control {
+  background-color: rgba(92, 75, 161, 0.1) !important;
+}
+
+// Product Page Css Start
+
+.product-footer {
+  background: linear-gradient(180deg, rgba(255, 228, 147, 0.1) 47.11%, rgba(255, 200, 39, 0.2) 105.98%);
+}
+
+.footer-star {
+  margin-left: -25px;
+  background: url(./assets/Product-img/product-footer-star.svg) no-repeat left;
+}
+
+.footer-star img {
+  height: 46.26px;
+  width: 53.66px;
+}
+
+.product-top-frame {
+  margin-top: -40px;
+  margin-left: 35%;
+}
+
+.slider-container.product-slider {
+  padding: 0 !important;
+  margin: 0 auto !important;
+  overflow: visible !important;
+  width: 100vw !important;
+  max-width: 100vw !important;
+}
+
+// Slider Arrow hide
+.product-slider .slick-prev,
+.slick-next {
+  display: none !important;
+}
+
+.product-card {
+  border-radius: 12px !important;
+  // width: 260px !important;
+  height: 350px !important;
+  box-shadow: 0px 4px 16px 1px rgba(75, 56, 151, 0.2);
+  transform: scale(0.7);
+  transition: transform 0.3s ease;
+  position: relative;
+  // overflow: hidden;
+}
+
+.slick-current .product-card {
+  border-radius: 12px !important;
+  width: 350px !important;
+  height: 400px !important;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+/* Discount badge */
+.discount-badge {
+  position: absolute;
+  top: -33px;
+  left: 40%;
+  background: url(./assets/Product-img/product-frame.svg) no-repeat;
+  font-weight: bold;
+  font-size: 14px;
+  color: rgba(232, 90, 90, 1);
+  min-width: 80px;
+  /* ensure enough space */
+  min-height: 100px;
+}
+
+.slick-track {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.card-bg-purple-color {
+  background: linear-gradient(180deg, rgba(125, 111, 195, 0.4) -70.65%, #EFF3F7 66.01%);
+}
+
+.card-bg-pink-color {
+  background: linear-gradient(180deg, rgba(231, 191, 214, 0.6) -70.65%, #EFF3F7 47.72%);
+}
+
+.card-bg-green-color {
+  background: linear-gradient(180deg, rgba(184, 226, 220, 0.8) -33.16%, #EFF3F7 47.72%);
+}
+
+.text-red {
+  color: rgba(232, 90, 90, 1);
+}
+
+.product-btn {
+  border-radius: 8px;
+}
+
+.product-btn-purple {
+  background-color: rgba(144, 133, 204, 1);
+}
+
+.product-btn-pink {
+  background-color: rgba(219, 159, 193, 1);
+}
+
+.product-btn-green {
+  background-color: rgba(139, 208, 198, 1);
+}
+
+.orange-planet {
+  position: absolute;
+  top: 0px;
+  left: -30px;
+  width: 210.55px;
+  height: 115.12px;
+  // z-index: 1;
+}
+
+.green-planet {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 78px;
+  height: 78px;
+}
+
+.pink-planet {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 95.82px;
+  height: 114.16px;
+}
+
+// Ufo top Fixed Css
+.ufo-fixed {
+  position: fixed;
+  top: 90px;
+  right: 12%;
+}
+
+// =====================================
+// My Referral Css start Here
+// =========================================
+
+.referral-wrapper {
+  position: relative;
+}
+
+.referral-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+  border-radius: 12px;
+  transition: transform 0.3s ease, background 0.3s ease;
+  transform-origin: bottom;
+  width: 400px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.referral-card:hover {
+  background: linear-gradient(180deg, rgba(77, 60, 155, 0) 0%, #4D3C9B 94.59%);
+  box-shadow: 0px 4px 16px 0px rgba(255, 255, 255, 0.25);
+  transform: scale(1.10);
+  height: 443px;
+}
+
+.referral-card:hover .referral-txt {
+  color: var(--text-blue) !important;
+}
+
+.referral-yellow-text {
+  color: #FFE14D;
+}
+
+.card-ufo-img {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: auto;
+  z-index: 1;
+}
+
+.cloud-img {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  background-image: url('./assets/MyReferral-img/clouds\ \(2\).svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  z-index: 2;
+}
+
+.invite-card {
+  background: linear-gradient(0deg, #F6F9FE 27.34%, #8FD3EA 56.12%, #493495 105.15%);
+  border-radius: 24px;
+  box-shadow: 0px 4px 16px 1px rgba(0, 0, 0, 0.15);
+  position: relative;
+  padding: 10px;
+}
+
+.astronauts {
+  bottom: 70px;
+  left: 50px;
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  gap: 10px;
+}
+
+.astronauts img {
+  width: 68.86px;
+  height: 158px;
+}
+
+.blue-bottom-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  background: url("./assets/MyReferral-img/BLUE\ PATTI.svg");
+  background-size: contain, cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.copy-input-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+
+  .input-invite-friend {
+    padding: 11px 16px;
+    width: 100%;
+    height: 48px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #ffffff;
+  }
+
+  .copy-button {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    padding: 0 10px;
+    cursor: pointer;
+    background: #1a2a6c;
+    color: #ffffff;
+    border: 1px solid #1a2a6c;
+    padding: 7px 24px;
+    border-radius: 4px;
+    outline: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .ufo-fixed {
+    right: 5%;
+  }
+}
+
+/* For mobile devices (screen width ≤ 767px) */
+@media (max-width: 767px) {
+  .ufo-fixed {
+    right: 2%;
+    top: 70px;
+    /* optional: move it up slightly on smaller screens */
+  }
+}
+.cursor-pointer{
+  cursor: pointer;
 }

@@ -73,10 +73,10 @@ const Howitworks = ({ isActive, isExiting }) => {
 
         {!showSteps && (
           <div
-            className={`howitwork-first d-flex h-100 justify-content-center align-items-center ${robotClicked ? 'robot-exit' : ''}`}
+            className={`howitwork-first cursor-pointer d-flex h-100 justify-content-center align-items-center ${robotClicked ? 'robot-exit' : ''}`}
             onClick={handleRobotClick}
           >
-            <img className="robort-image" src={Robortgif} alt="Robot" />
+            <img className="robort-image cursor-pointer" src={Robortgif} alt="Robot" />
           </div>
         )}
 
