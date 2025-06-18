@@ -104,7 +104,7 @@ const Offer = () => {
   }, []);
 
   return (
-    <section className="offer-section position-relative">
+    <section className="offer-section">
       <div className='offer-sect-content top-0 start-0 bottom-0 end-0'>
       <div className="container-fluid px-5 pt-5">
         <div
@@ -352,7 +352,7 @@ const Offer = () => {
         <div
           className="position-absolute footer-semi-planet"
           data-aos="fade-up"
-          data-aos-delay="100"
+          // data-aos-delay="100"
         ></div>
       </div>
       </div>

@@ -70,9 +70,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 // Components
-// import SecondScreen from './Component/Pages/secondScreen/secondScreen';
 import RedeemAndEarn from './Component/Pages/RedeemEarn/redeemAndEarn';
-// import Home from './Component/Pages/Home/home';
 import PlayEarn from './Component/Pages/palyEarn/playEarn';
 import Invitefriend from './Component/Common/Invitefriend/invitefriend';
 import Offer from './Component/Pages/Offers/offer';
@@ -97,17 +95,31 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (activeIndex === 2) {
+    if (activeIndex === 2 && activeIndex === 1) {
       setExitAnimation(false);
       setTimeout(() => AOS.refreshHard(), 100);
     } else if (activeIndex > 2) {
       setExitAnimation(true);
     }
   }, [activeIndex]);
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          AOS.refreshHard();
+        }, 100);
+      });
+    }
+  }, [activeIndex]);
 
   useEffect(() => {
     setTimeout(() => {
       AOS.refreshHard(); // ensures animations reset even if DOM changed
+    }, 1000);
+  }, [activeIndex]);
+  useEffect(() => {
+    setTimeout(() => {
+      AOS.refreshHard();
     }, 1000);
   }, [activeIndex]);
 
@@ -163,7 +175,7 @@ function App() {
         // MyReferralScreen2,
       ].map((Component, index) => {
         const isActive = index === activeIndex;
-        const isOfferSection = index === 5; // Offer section index
+        const isOfferSection = index === 5;
 
         return (
           <div
@@ -175,15 +187,12 @@ function App() {
             }}
           >
             {index === 2 ? (
-              <div data-aos="zoom-in-up">
-                <Howitworks
-                  isActive={isActive && !exitAnimation}
-                  isExiting={exitAnimation}
-                />
-              </div>
+              <Howitworks isActive={isActive} isExiting={exitAnimation} />
+            ) : index === 1 ? (
+              <Invitefriend isActive={isActive} isExiting={exitAnimation} />
             ) : (
-              <div data-aos="fade-up">
-                <Component ActiveAnimt={activeIndex === 1 ? true : false} />
+              <div className='h-100' data-aos="fade-up">
+                <Component />
               </div>
             )}
           </div>
