@@ -1,5 +1,5 @@
 // App.js
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -21,8 +21,11 @@ import headphone from '../../../assets/offer/headphones.svg';
 import plus from '../../../assets/offer/plus.svg';
 import minus from '../../../assets/offer/minus.svg';
 import semiplnt from '../../../assets/offer/semiplanet.svg';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Offer = () => {
+  
   const cards = [
     {
       id: 1,
@@ -88,8 +91,21 @@ const Offer = () => {
     },
   ];
 
+  // Initialize AOS on component mount
+  useEffect(() => {
+    AOS.init({
+      duration: 1500,
+      once: false,
+      mirror: true,
+      easing: 'ease-in-out',
+    });
+    // Refresh AOS when the component updates
+    AOS.refresh();
+  }, []);
+
   return (
-    <section className="offer-section">
+    <section className="offer-section position-relative">
+      <div className='offer-sect-content top-0 start-0 bottom-0 end-0'>
       <div className="container-fluid px-5 pt-5">
         <div
           className="row"
@@ -338,6 +354,7 @@ const Offer = () => {
           data-aos="fade-up"
           data-aos-delay="100"
         ></div>
+      </div>
       </div>
     </section>
   );
