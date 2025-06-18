@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "./slidercard.scss"
 import Slider from "react-slick";
-// import { FaList } from "react-icons/fa6";
+import { FaList } from "react-icons/fa6";
 import TrackModal from '../RefrrralTrackModal/trackModal';
 
 // Import Json
