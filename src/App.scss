@@ -1378,3 +1378,22 @@ body::-webkit-scrollbar {
   }
 }
 
+// ==============
+/* FadeUpSection.css */
+
+@keyframes ffadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up-section {
+  opacity: 0; /* Start with hidden */
+  animation: ffadeUp 1s ease-out forwards; /* Run the animation once */
+  /* Optional: add some margin or styling */
+}

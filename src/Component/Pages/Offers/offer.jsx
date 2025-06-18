@@ -1,5 +1,5 @@
 // App.js
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -21,8 +21,11 @@ import headphone from '../../../assets/offer/headphones.svg';
 import plus from '../../../assets/offer/plus.svg';
 import minus from '../../../assets/offer/minus.svg';
 import semiplnt from '../../../assets/offer/semiplanet.svg';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Offer = () => {
+  
   const cards = [
     {
       id: 1,
@@ -87,6 +90,18 @@ const Offer = () => {
         'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.',
     },
   ];
+
+  // Initialize AOS on component mount
+  useEffect(() => {
+    AOS.init({
+      duration: 1500,
+      once: false,
+      mirror: true,
+      easing: 'ease-in-out',
+    });
+    // Refresh AOS when the component updates
+    AOS.refresh();
+  }, []);
 
   return (
     <section className="offer-section position-relative">
